@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   NAMI Creative — Design Tokens (Tailwind v4 @theme)
+   Design Tokens (Tailwind v4 @theme)
    Token names are chosen so Tailwind v4 auto-generates clean utility names:
      --color-fg          -> text-fg, bg-fg, border-fg, ring-fg, ...
      --color-surface-0   -> bg-surface-0, text-surface-0, ...
@@ -9,7 +9,7 @@
      --font-sans         -> font-sans
    ========================================================================== */
 @theme {
-  /* surface scale — dark-first */
+  /* surface scale - dark-first */
   --color-surface-0: rgb(12 13 15);
   --color-surface-1: rgb(18 19 22);
   --color-surface-2: rgb(22 24 28);
@@ -54,7 +54,7 @@
   --shadow-glow-lg: 0 16px 48px rgb(255 0 188 / 0.3);
 
   /* container */
-  --container-max: 88rem; /* 1408px — premium width */
+  --container-max: 88rem; /* 1408px - premium width */
 }
 
 /* ==========================================================================
@@ -228,7 +228,7 @@
   }
 
   /* ========================================================================
-     LetterReveal — per-character title animation.
+     LetterReveal - per-character title animation.
      Per-char gradient + flow is applied below so background-clip:text
      works inside each animated char (the parent's gradient can't pass
      through descendants with stacking contexts created by filter/opacity).
@@ -283,7 +283,7 @@
   }
 
   /* ========================================================================
-     Insights article body — long-form prose styling
+     Insights article body - long-form prose styling
      Applied via .prose-insights wrapper around <MDXRemote>
      ======================================================================== */
   .prose-insights {
@@ -432,7 +432,7 @@
 }
 
 /* ==========================================================================
-   Premium lift — refractive material, instrument detail, kinetic primitives
+   Premium lift - refractive material, instrument detail, kinetic primitives
    Added for the cinematic redesign. Brand tokens only; no new hues.
    ========================================================================== */
 @layer components {
@@ -463,7 +463,7 @@
       0 32px 80px -28px rgb(255 0 188 / 0.28);
   }
 
-  /* Faint blueprint field for section backgrounds — instrument-grade detail
+  /* Faint blueprint field for section backgrounds - instrument-grade detail
      that reads on close inspection without competing with content. */
   .hairline-grid {
     background-image:
@@ -474,7 +474,7 @@
     mask-image: radial-gradient(ellipse at center, #000 30%, transparent 78%);
   }
 
-  /* Underline-draw link — a wipe-in rule that grows from the left on hover.
+  /* Underline-draw link - a wipe-in rule that grows from the left on hover.
      More crafted than a static text-decoration; reads as intentional. */
   .link-underline {
     background-image: linear-gradient(var(--color-accent), var(--color-accent));
@@ -487,7 +487,7 @@
     background-size: 100% 1px;
   }
 
-  /* Mono instrument label — coordinate/index detail. Tight, technical. */
+  /* Mono instrument label - coordinate/index detail. Tight, technical. */
   .mono-label {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     font-size: 0.6875rem;
@@ -496,7 +496,7 @@
     color: var(--color-fg-subtle);
   }
 
-  /* Cyan companion to .text-gradient — the secondary accent finally earns a
+  /* Cyan companion to .text-gradient - the secondary accent finally earns a
      role (data, secondary headings) so the magenta/cyan duality is a system. */
   .text-gradient-cyan {
     background: linear-gradient(
@@ -512,7 +512,7 @@
     animation: text-gradient-flow 24s linear infinite;
   }
 
-  /* Filmic grain — a single fixed, pointer-safe layer (never on a scroller).
+  /* Filmic grain - a single fixed, pointer-safe layer (never on a scroller).
      Applied to one <div> in the layout root. Extremely low opacity. */
   .grain {
     position: fixed;

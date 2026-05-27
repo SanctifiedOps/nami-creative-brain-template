@@ -33,7 +33,7 @@ export function IntegratedSystem() {
       variants={stage}
       className="grid gap-6 lg:grid-cols-2 lg:gap-8"
     >
-      {/* The usual way — fragmented */}
+      {/* The usual way - fragmented */}
       <motion.div
         variants={blurUp}
         className="rounded-3xl border border-line bg-surface-1/30 p-8 md:p-10"
@@ -60,7 +60,7 @@ export function IntegratedSystem() {
         </p>
       </motion.div>
 
-      {/* The NAMI way — integrated */}
+      {/* The integrated way */}
       <motion.div
         variants={blurUp}
         className="glass-refractive relative overflow-hidden rounded-3xl p-8 md:p-10"

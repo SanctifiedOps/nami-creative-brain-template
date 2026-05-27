@@ -32,7 +32,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "Brand strategy", href: "/services/brand-strategy" },
       { label: "Content systems", href: "/services/content-systems" },
-      { label: "Website + funnel", href: "/services/website-funnel" },
+      { label: "Website design", href: "/services/website-design" },
       { label: "Visual direction", href: "/services/visual-direction" },
       { label: "Automation + growth", href: "/services/automation-growth" },
     ],

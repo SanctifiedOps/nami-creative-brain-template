@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
+import { brand } from "@/lib/brand";
 
-const SITE = "https://namicreative.co.uk";
+const SITE = brand.url;
 
 /**
  * Explicit rules for both general crawlers and AI/LLM crawlers. The

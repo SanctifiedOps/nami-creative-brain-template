@@ -6,9 +6,9 @@ import { PostCard } from "@/components/insights/post-card";
 import { getAllPosts, getAllTags } from "@/lib/content/insights";
 
 export const metadata: Metadata = {
-  title: "Creative Waves · Studio notes from NAMI Creative",
+  title: "Insights · Notes from the studio",
   description:
-    "Notes, frameworks, and breakdowns from inside the studio. Brand systems, content engines, automation infrastructure, and the work behind the work.",
+    "Notes, frameworks, and breakdowns from inside the studio. Replace this placeholder description with your own.",
 };
 
 export default async function InsightsPage() {
@@ -20,13 +20,13 @@ export default async function InsightsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Brands for the future"
+        eyebrow="From the studio"
         title={
           <>
-            Creative <span className="text-gradient">Waves.</span>
+            Studio <span className="text-gradient">insights.</span>
           </>
         }
-        lead="Branding is being rebuilt by automation. Frameworks, breakdowns, and where the industry is heading next."
+        lead="Notes, frameworks, and breakdowns from inside the studio. Replace this placeholder with your own introduction."
       >
         <NewsletterSubscribe
           variant="card"
@@ -53,10 +53,10 @@ export default async function InsightsPage() {
           <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:gap-16">
             {/* Main column */}
             <div>
-              {/* Featured post — full-width prominent card */}
+              {/* Featured post - full-width prominent card */}
               {featured && <PostCard post={featured} variant="featured" />}
 
-              {/* Rest of posts — single column when there's only one
+              {/* Rest of posts - single column when there's only one
                   non-featured post so it sits at full width below the
                   featured hero instead of orphaning in a half-width grid
                   cell. 2-col grid returns automatically with 2+ posts. */}

@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Pricing · Project, partnership, and systems engagements",
   description:
-    "Three ways to work with NAMI Creative: scoped projects (4-8 weeks), ongoing partnerships (monthly retainer), and systems + product builds (2-5 weeks). Engagements sized to the work, not packaged into fixed bundles. Honest scoping on every call.",
+    "Three ways to work with the studio: scoped projects, ongoing partnerships, and systems + product builds. Engagements sized to the work, not packaged into fixed bundles.",
   keywords: [
-    "creative studio pricing UK",
+    "creative studio pricing",
     "brand engagement pricing",
     "creative retainer pricing",
-    "boutique brand studio cost",
+    "brand studio cost",
   ],
   openGraph: {
-    title: "Pricing · NAMI Creative",
+    title: `Pricing · ${brand.name}`,
     description:
-      "Project (4-8 weeks), Partnership (monthly retainer), Systems + product (2-5 weeks). Sized to the work, never packaged.",
-    url: "https://namicreative.co.uk/pricing",
+      "Project, partnership, and systems engagements. Sized to the work, never packaged.",
+    url: `${brand.url}/pricing`,
   },
 };
 

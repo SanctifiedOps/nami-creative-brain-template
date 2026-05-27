@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description:
     "Five integrated pillars for founders and growing brands: brand strategy and identity, content systems, conversion websites, visual direction, and growth automation. Designed against each other from day one, not stitched at handoff.",
   keywords: [
-    "brand strategy studio UK",
+    "brand strategy studio",
     "content systems agency",
     "conversion website agency",
     "creative direction studio",
-    "marketing automation agency UK",
+    "marketing automation agency",
     "creative studio services",
   ],
 };
@@ -54,7 +54,7 @@ export default function ServicesPage() {
         <ServicesGrid />
       </section>
 
-      {/* The model — integrated vs fragmented */}
+      {/* The model - integrated vs fragmented */}
       <section className="relative overflow-hidden border-t border-line bg-surface-1/40 py-24 md:py-32">
         <div aria-hidden className="hairline-grid absolute inset-0 opacity-40" />
         <div className="container-shell relative">
@@ -74,7 +74,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* FAQ — sticky two-column */}
+      {/* FAQ - sticky two-column */}
       <section className="container-shell border-t border-line py-24 md:py-32">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">

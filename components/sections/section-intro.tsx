@@ -16,7 +16,7 @@ type Props = {
 
 /**
  * Homepage section header. Uses a mono coordinate index instead of an
- * uppercase eyebrow — the numbered system is the deliberate rhythm, replacing
+ * uppercase eyebrow - the numbered system is the deliberate rhythm, replacing
  * the eyebrow-on-every-section AI tell.
  */
 export function SectionIntro({

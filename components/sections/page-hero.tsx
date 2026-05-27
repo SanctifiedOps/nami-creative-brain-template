@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import { stage, fadeUp } from "@/lib/motion";
 import { LetterReveal } from "@/components/motion/letter-reveal";
-import { VideoBackground } from "@/components/hero/video-background";
 import { HeroLights } from "@/components/hero/hero-lights";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +15,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-/** Inner-page hero: video background + letter-reveal title */
+/** Inner-page hero: animated light field + letter-reveal title */
 export function PageHero({ eyebrow, title, lead, className, children }: Props) {
   return (
     <section
@@ -25,7 +24,6 @@ export function PageHero({ eyebrow, title, lead, className, children }: Props) {
         className,
       )}
     >
-      <VideoBackground src="wave-3.mp4" overlay={0.78} />
       <HeroLights />
 
       {/* Blend hero into the section below */}

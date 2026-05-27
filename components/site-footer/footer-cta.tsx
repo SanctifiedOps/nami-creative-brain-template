@@ -9,7 +9,7 @@ import { stage, fadeUp } from "@/lib/motion";
 
 /**
  * Cinematic closing moment. Instrument grid + an accent light bloom behind a
- * centred statement and a magnetic CTA — the last thing a visitor sees before
+ * centred statement and a magnetic CTA: the last thing a visitor sees before
  * the sitemap.
  */
 export function FooterCta() {
@@ -41,9 +41,8 @@ export function FooterCta() {
           className="mx-auto mt-8 max-w-xl leading-relaxed text-fg-muted md:text-lg"
           variants={fadeUp}
         >
-          Self-sustaining creative ecosystems for founders. One creative partner
-          across brand, content, and growth systems, so your business stops
-          depending on you being in every room.
+          A short closing line that invites visitors to get in touch. Replace
+          this placeholder with your own call to action.
         </motion.p>
         <motion.div className="mt-12 flex justify-center" variants={fadeUp}>
           <Magnetic>

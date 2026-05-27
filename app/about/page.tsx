@@ -15,14 +15,14 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About · NAMI Creative"
+        eyebrow="About the studio"
         title={
           <>
-            Brand as{" "}
-            <span className="text-gradient sm:block">infrastructure.</span>
+            A short line about{" "}
+            <span className="text-gradient sm:block">the studio.</span>
           </>
         }
-        lead="A creative marketing studio building brand identity, content systems, and growth infrastructure for founders who want the work to keep running after they stop being in every room."
+        lead="A short introduction to the studio: what it does and the kind of work it takes on. Replace this placeholder with your own about copy."
       />
 
       {/* Story */}
@@ -39,24 +39,20 @@ export default function AboutPage() {
           </motion.p>
           <motion.div variants={fadeUp} className="space-y-6 max-w-2xl">
             <p className="text-2xl font-medium leading-snug tracking-tight md:text-3xl">
-              NAMI exists to build brands that{" "}
+              A short opening statement about{" "}
               <span className="text-gradient">
-                move with intention
+                why the studio exists
               </span>{" "}
-              and hold while the business scales.
+              and what it sets out to do.
             </p>
             <p className="text-fg-muted md:text-lg leading-relaxed">
-              Most businesses don't have a brand problem. They have an
-              alignment problem. Identity drifts away from messaging,
-              messaging drifts from product, content drifts from strategy,
-              and growth becomes harder than it should be.
+              A placeholder paragraph about the studio's point of view. Replace
+              this with the problem you solve and how you think about the work.
             </p>
             <p className="text-fg-muted md:text-lg leading-relaxed">
-              We sit between three roles (brand studio, creative partner,
-              systems builder) because that's the shape of the work that
-              compounds. Strategy without execution is a
-              deck. Execution without systems is exhaustion. We do all
-              three so what gets built keeps working after we leave.
+              A second placeholder paragraph about how the studio operates and
+              what makes the approach distinctive. Replace this with your own
+              story.
             </p>
           </motion.div>
         </motion.div>
@@ -129,72 +125,66 @@ export default function AboutPage() {
           <motion.div variants={fadeUp}>
             <div className="glass-refractive relative aspect-3/4 overflow-hidden rounded-2xl">
               <Image
-                src="/assets/images/bb.jpg"
-                alt="Joe Wilson, founder of NAMI Creative"
+                src="/placeholder-portrait.svg"
+                alt="Studio founder"
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
               />
             </div>
-            <p className="mono-label mt-4">Joe Wilson · Founder, NAMI Creative</p>
+            <p className="mono-label mt-4">Founder name · Founder</p>
           </motion.div>
           <motion.div variants={fadeUp} className="max-w-2xl space-y-6">
             <p className="mono-label">02 / The founder</p>
             <p className="text-2xl font-medium leading-snug tracking-tight md:text-3xl">
-              Hi, I'm <span className="text-gradient">Joe Wilson.</span>
+              Hi, I&apos;m <span className="text-gradient">your name.</span>
             </p>
             <p className="text-fg-muted md:text-lg leading-relaxed">
-              I started NAMI Creative to do the kind of work that only happens
-              when strategy, design, and systems are built by the same hands.
-              Direct client relationships, senior-only output, no middle
-              layer.
+              A short placeholder bio. Introduce yourself, your background, and
+              why you started the studio. Replace this with your own story.
             </p>
             <p className="text-fg-muted md:text-lg leading-relaxed">
-              Twenty years in brand building and design sit behind that. I held
-              a head-of-department role at the UK&apos;s leading energy
-              consultants&apos; trade body, building a brand with enough weight
-              to earn a seat in Westminster, and I&apos;ve been featured on BBC
-              Radio for the Nami Up North project.
+              A second placeholder paragraph for relevant experience, notable
+              work, or credentials. Keep it focused and concrete.
             </p>
             <p className="text-fg-muted md:text-lg leading-relaxed">
-              Today I work with founders, small businesses, and trades who care
-              about doing the work properly. Independent operators through to
-              growing teams. The common thread is intent.
+              A third placeholder paragraph about who you work with and the
+              kind of clients the studio is built for.
             </p>
 
             <dl className="grid gap-8 border-t border-line pt-6 sm:grid-cols-3">
               <div>
                 <dt className="mono-label">Experience</dt>
                 <dd className="mt-2 text-lg font-medium tracking-tight text-fg">
-                  20 years
+                  A stat
                 </dd>
                 <p className="mt-1 text-sm text-fg-muted">
-                  Brand building + design
+                  A short label
                 </p>
               </div>
               <div>
-                <dt className="mono-label">Leadership</dt>
+                <dt className="mono-label">A label</dt>
                 <dd className="mt-2 text-lg font-medium tracking-tight text-fg">
-                  Head of Dept.
+                  A stat
                 </dd>
                 <p className="mt-1 text-sm text-fg-muted">
-                  UK&apos;s leading energy consultants&apos; trade body
+                  A short label
                 </p>
               </div>
               <div>
-                <dt className="mono-label">Featured</dt>
+                <dt className="mono-label">A label</dt>
                 <dd className="mt-2 text-lg font-medium tracking-tight text-fg">
-                  BBC Radio
+                  A stat
                 </dd>
                 <p className="mt-1 text-sm text-fg-muted">
-                  Nami Up North project
+                  A short label
                 </p>
               </div>
             </dl>
 
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-2">
               <a
-                href="https://www.linkedin.com/in/brandingbyjoewilson/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-sm font-medium text-fg hover:text-accent transition-colors"

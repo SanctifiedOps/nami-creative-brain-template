@@ -18,7 +18,7 @@ This is how one person sells premium websites *and* marketing retainers without 
 
 Most starter templates make every site look the same, and they stop at the build. You ship a site once, get paid once, and move on.
 
-This is the opposite. It is the **production engine** behind [namicreative.co.uk](https://namicreative.co.uk), a site built so it would be hard to tell a person used an AI to design it, packaged with the full toolkit and the captured thinking so you hit that bar on every build without redoing the work. Same engine, different soul, every time.
+This is the opposite. It is the **production engine** behind [namicreative.co.uk](https://namicreative.co.uk), a site built so it would be hard to tell a person used an AI to design it, packaged with the full toolkit and the captured thinking so you hit that bar on every build without redoing the work. Same engine, different soul, every time. The repo ships as a clean, unbranded starter, not a copy of any existing site.
 
 Then it goes further than any template has any right to. Bundled in `.claude/skills/` are **93 Claude skills** covering design, frontend engineering, copy, SEO, conversion optimization, paid ads, email, social, competitive research, and pricing. So once the site is live, you are not done. You are set up to run the client's entire marketing operation from the same repo.
 
@@ -51,7 +51,7 @@ One repo. One operator. A full-service offer. You decide the prices; the engine 
 
 ## What's inside
 
-- **A complete Next.js 15 site**, rendering NAMI Creative end to end as a working demo of the quality bar. Reference to re-skin, not boilerplate to delete.
+- **A complete Next.js 15 site**, shipped as a neutral premium starter. Every page built and wired: home, work, services, process, pricing, insights, about, contact, and legal. No demo content to rip out, just placeholders to fill.
 - **A real design system** in `app/globals.css` (`@theme` tokens) and `lib/brand.ts`: surfaces, accents, type, motion easings, shadows, spacing rhythm. Change a token, the whole site moves with it.
 - **A bespoke motion language**: liquid video hero with instant-paint poster LCP, scroll-reveal type, spotlight cards, crafted route transitions, glass-refractive surfaces, hairline grids. All respecting `prefers-reduced-motion`, all tuned for mobile.
 - **Content architecture** in `lib/content/*.ts` and `content/insights/*.mdx`. Copy lives in modules, never hardcoded in pages, so edits propagate everywhere.

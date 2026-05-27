@@ -16,14 +16,14 @@ export const engagements: EngagementModel[] = [
     name: "Project",
     best: "For a defined brand or website build with a clear brief.",
     description:
-      "Single engagement: typically a brand build, a website, or a positioning + content reset. Fixed brief, fixed timeline, deliverable handoff. We talk first, plan to the brief, then build.",
+      "A single engagement: typically a brand build, a website, or a positioning and content reset. Fixed brief, fixed timeline, deliverable handoff.",
     scope: [
       "Brand strategy + identity",
-      "Conversion-led website",
+      "Website",
       "Content + visual system",
       "Launch handoff",
     ],
-    timeline: "4–8 weeks",
+    timeline: "4 to 8 weeks",
     starting: "Sized to the work",
     cta: { label: "Plan a project", href: "/contact" },
   },
@@ -32,7 +32,7 @@ export const engagements: EngagementModel[] = [
     name: "Partnership",
     best: "For teams scaling brand, content, and systems together.",
     description:
-      "Ongoing creative partnership. We sit close, ship regularly, and evolve the brand as the business grows. Usually starts after a foundational project; sometimes ports from another team's work.",
+      "An ongoing creative partnership. The studio sits close, ships regularly, and evolves the brand as the business grows.",
     scope: [
       "Monthly creative direction",
       "Content pipeline + production",
@@ -50,14 +50,14 @@ export const engagements: EngagementModel[] = [
     name: "Systems + product",
     best: "For founders productising their brand or content engine.",
     description:
-      "Standalone systems work: operations stacks, automated content pipelines, lead-capture infrastructure, brand templates. Built to be operated by your team, not us.",
+      "Standalone systems work: operations stacks, automated content pipelines, lead-capture infrastructure, brand templates. Built to be operated by your team.",
     scope: [
       "Workflow + automation builds",
       "CRM + lifecycle pipelines",
       "Brand template systems",
       "Internal team training",
     ],
-    timeline: "2–5 weeks",
+    timeline: "2 to 5 weeks",
     starting: "Sized to the work",
     cta: { label: "Talk systems", href: "/contact" },
   },

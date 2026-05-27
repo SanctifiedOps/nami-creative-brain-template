@@ -28,7 +28,7 @@ export async function generateMetadata({
   const display = tags.find((t) => slugifyTag(t) === tag);
   if (!display) return { title: "Topic not found" };
   return {
-    title: `${display} · Creative Waves`,
+    title: `${display} · Insights`,
     description: `Posts tagged ${display}, from inside the studio.`,
   };
 }
@@ -52,13 +52,13 @@ export default async function TopicPage({
   return (
     <>
       <PageHero
-        eyebrow="Creative Waves · Topic"
+        eyebrow="Insights · Topic"
         title={
           <>
             Tagged <span className="text-gradient">{display}.</span>
           </>
         }
-        lead={`Every Creative Waves piece tagged ${display}, from inside the studio.`}
+        lead={`Every insight tagged ${display}, from inside the studio.`}
       />
 
       <section className="container-shell py-20 md:py-28">
@@ -82,7 +82,7 @@ export default async function TopicPage({
                   aria-hidden
                   className="rotate-180 transition-transform duration-500 group-hover:-translate-x-0.5 group-hover:translate-y-0.5"
                 />
-                All Creative Waves
+                All insights
               </Link>
             </div>
           </div>

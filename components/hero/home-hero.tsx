@@ -12,7 +12,6 @@ import {
 } from "motion/react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Magnetic } from "@/components/motion/magnetic";
-import { VideoBackground } from "@/components/hero/video-background";
 import { HeroParticles } from "@/components/hero/particles";
 import { LetterReveal } from "@/components/motion/letter-reveal";
 import { fadeUp, ctaPop } from "@/lib/motion";
@@ -68,9 +67,7 @@ export function HomeHero() {
       onPointerMove={handlePointer}
       className="relative flex min-h-[88vh] items-center overflow-hidden md:min-h-[96vh]"
     >
-      <VideoBackground src="wave-3.mp4" overlay={0.72} />
-
-      {/* Reactive liquid light — magenta + cyan fields, additive over the wave */}
+      {/* Reactive liquid light: magenta + cyan fields over the dark surface */}
       <motion.div
         aria-hidden
         style={{ y: meshY }}
@@ -113,14 +110,14 @@ export function HomeHero() {
               <span className="absolute inset-0 animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
             </span>
-            Waves of Creative Impact
+            Your eyebrow line
           </motion.p>
 
           <h1 className="mx-auto max-w-[20ch] text-5xl font-semibold leading-[1.1] tracking-tight md:text-7xl">
             <LetterReveal stagger={0.018} duration={0.8}>
-              Your business shouldn&rsquo;t depend on you{" "}
+              A bold headline for{" "}
               <span className="text-gradient sm:block">
-                being in every room.
+                your studio.
               </span>
             </LetterReveal>
           </h1>
@@ -129,8 +126,8 @@ export function HomeHero() {
             className="mx-auto mt-10 max-w-xl text-lg leading-relaxed text-fg-muted md:text-xl"
             variants={fadeUp}
           >
-            Self-sustaining creative ecosystems for founders. One creative
-            partner across brand, content, and growth systems.
+            A short supporting line that explains what the studio does and who
+            it is for. Replace this placeholder with your own positioning.
           </motion.p>
 
           <motion.div
@@ -171,10 +168,10 @@ export function HomeHero() {
             className="mx-auto mt-20 flex max-w-2xl flex-col items-center gap-4 border-t border-line pt-8 md:mt-28"
             variants={fadeUp}
           >
-            <p className="mono-label">Currently building</p>
+            <p className="mono-label">What we do</p>
             <p className="text-sm text-fg-subtle md:text-base">
-              Brand systems · content engines · funnel websites · automation
-              infrastructure for founders building something deliberate.
+              Brand · content · websites · visual direction · growth systems.
+              Replace this line with a short summary of the studio's work.
             </p>
           </motion.div>
         </motion.div>

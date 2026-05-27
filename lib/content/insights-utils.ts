@@ -10,7 +10,7 @@ export type InsightFrontmatter = {
   pillar: string;
   /** Free-form taxonomy tags. Each becomes a clickable topic in the sidebar. */
   tags?: string[];
-  /** Featured image path, e.g. "/assets/blog-pics/friction-tax.png". */
+  /** Featured image path, e.g. "/placeholder-cover.svg". */
   cover?: string;
   date: string;
   minutes: number;

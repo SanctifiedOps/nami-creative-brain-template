@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Terms",
-  description:
-    "Terms of use for namicreative.co.uk and our engagement principles.",
+  description: `Terms of use for ${brand.domain} and our engagement principles.`,
   robots: { index: true, follow: true },
 };
 
-const UPDATED = "6 May 2026";
+const UPDATED = "Add a date";
 
 export default function TermsPage() {
   return (
@@ -28,10 +28,15 @@ export default function TermsPage() {
         <article className="mx-auto max-w-3xl space-y-10 text-fg-muted leading-relaxed">
           <p className="text-sm text-fg-subtle">Last updated: {UPDATED}</p>
 
+          <p className="rounded-xl border border-line bg-surface-1/40 p-4 text-sm text-fg-subtle">
+            Placeholder legal copy. Review these terms with a qualified adviser
+            and tailor them to your jurisdiction before publishing.
+          </p>
+
           <Block title="About these terms">
             <p>
-              These terms govern your use of namicreative.co.uk (the
-              &ldquo;site&rdquo;) operated by NAMI Creative
+              These terms govern your use of {brand.domain} (the
+              &ldquo;site&rdquo;) operated by {brand.legalName}
               (&ldquo;we&rdquo;, &ldquo;us&rdquo;). By using the site you
               agree to them. If you don&rsquo;t, please don&rsquo;t use the
               site.
@@ -49,9 +54,9 @@ export default function TermsPage() {
 
           <Block title="Content + IP">
             <p>
-              All content on the site, including the NAMI name, brand,
-              writing, design, code, and visuals, is owned by NAMI Creative
-              or its licensors. You may not reproduce, redistribute, or use
+              All content on the site, including the {brand.name} name, brand,
+              writing, design, code, and visuals, is owned by {brand.legalName}
+              {" "}or its licensors. You may not reproduce, redistribute, or use
               it commercially without written permission.
             </p>
             <p>
@@ -84,9 +89,10 @@ export default function TermsPage() {
 
           <Block title="External links">
             <p>
-              The site links to third-party websites (e.g. our clients&rsquo;
-              live sites, Calendly, social profiles). We don&rsquo;t control
-              and aren&rsquo;t responsible for their content or practices.
+              The site links to third-party websites (for example client
+              sites, scheduling tools, and social profiles). We don&rsquo;t
+              control and aren&rsquo;t responsible for their content or
+              practices.
             </p>
           </Block>
 
@@ -95,14 +101,14 @@ export default function TermsPage() {
               The site is provided &ldquo;as is&rdquo;. We do our best to keep
               it accurate and online but make no warranties about availability,
               completeness, or fitness for any particular purpose. To the
-              fullest extent permitted by UK law, we&rsquo;re not liable for
-              any indirect or consequential loss arising from your use of the
-              site.
+              fullest extent permitted by applicable law, we&rsquo;re not
+              liable for any indirect or consequential loss arising from your
+              use of the site.
             </p>
             <p>
               Nothing in these terms limits liability that cannot be excluded
-              under UK law (including death or personal injury caused by
-              negligence, or fraud).
+              under applicable law (including death or personal injury caused
+              by negligence, or fraud).
             </p>
           </Block>
 
@@ -116,9 +122,9 @@ export default function TermsPage() {
 
           <Block title="Governing law">
             <p>
-              These terms are governed by the laws of England and Wales.
-              Disputes are subject to the exclusive jurisdiction of the
-              English courts.
+              These terms are governed by the laws of your jurisdiction.
+              Update this section to name the governing law and courts that
+              apply to the studio.
             </p>
           </Block>
 

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import crypto from "node:crypto";
+import { brand } from "@/lib/brand";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -11,7 +12,7 @@ type ContactPayload = {
   projectType?: unknown;
   budget?: unknown;
   message?: unknown;
-  // honeypot — bots fill it, humans don't see it
+  // honeypot - bots fill it, humans don't see it
   website?: unknown;
 };
 
@@ -54,12 +55,12 @@ async function upsertMailchimp(d: Cleaned): Promise<void> {
   const apiKey = process.env.MAILCHIMP_API_KEY;
   const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
   if (!apiKey || !audienceId) {
-    console.warn("Mailchimp env vars missing — skipping upsert.");
+    console.warn("Mailchimp env vars missing - skipping upsert.");
     return;
   }
   const dc = apiKey.split("-")[1];
   if (!dc) {
-    console.warn("Mailchimp API key malformed — skipping upsert.");
+    console.warn("Mailchimp API key malformed - skipping upsert.");
     return;
   }
 
@@ -103,7 +104,7 @@ async function upsertMailchimp(d: Cleaned): Promise<void> {
 async function notifyMake(d: Cleaned): Promise<void> {
   const url = process.env.CONTACT_WEBHOOK_URL;
   if (!url) {
-    console.warn("CONTACT_WEBHOOK_URL not set — skipping Make notification.");
+    console.warn("CONTACT_WEBHOOK_URL not set - skipping Make notification.");
     return;
   }
   const res = await fetch(url, {
@@ -113,7 +114,7 @@ async function notifyMake(d: Cleaned): Promise<void> {
       ...d,
       tags: tagsFor(d),
       submittedAt: new Date().toISOString(),
-      source: "namicreative.co.uk/contact",
+      source: `${brand.domain}/contact`,
     }),
   });
   if (!res.ok) {
@@ -127,7 +128,7 @@ async function notifyDashboard(d: Cleaned): Promise<void> {
   const secret = process.env.DASHBOARD_LEAD_WEBHOOK_SECRET;
   if (!url || !secret) {
     console.warn(
-      "DASHBOARD_LEAD_WEBHOOK_URL or DASHBOARD_LEAD_WEBHOOK_SECRET not set — skipping dashboard notify.",
+      "DASHBOARD_LEAD_WEBHOOK_URL or DASHBOARD_LEAD_WEBHOOK_SECRET not set - skipping dashboard notify.",
     );
     return;
   }
@@ -156,10 +157,10 @@ async function notifyDashboard(d: Cleaned): Promise<void> {
       company: d.company || undefined,
       message: enrichedMessage,
       subject: d.projectType
-        ? `Contact form — ${d.projectType}`
+        ? `Contact form - ${d.projectType}`
         : "Contact form submission",
       source: "website",
-      sourceRef: "namicreative.co.uk/contact",
+      sourceRef: `${brand.domain}/contact`,
     }),
   });
   if (!res.ok) {
@@ -176,7 +177,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  // Honeypot — silently accept and discard
+  // Honeypot - silently accept and discard
   if (typeof payload.website === "string" && payload.website.trim() !== "") {
     return NextResponse.json({ ok: true });
   }
@@ -223,7 +224,7 @@ export async function POST(req: Request) {
       dashRes.status === "rejected" ? dashRes.reason : null,
     );
     return NextResponse.json(
-      { error: "We couldn't send your message. Please email hello@namicreative.co.uk." },
+      { error: "We couldn't send your message. Please email hello@yourstudio.com." },
       { status: 500 },
     );
   }

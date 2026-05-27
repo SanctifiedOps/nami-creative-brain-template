@@ -7,14 +7,23 @@ import {
   FacebookIcon,
 } from "@/components/icons/socials";
 import { footerNav } from "@/lib/nav";
+import { brand } from "@/lib/brand";
 import { FooterCta } from "./footer-cta";
 
-const socials = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/98101073", icon: LinkedinIcon },
-  { label: "Instagram", href: "https://www.instagram.com/namicreativeuk/", icon: InstagramIcon },
-  { label: "YouTube", href: "https://www.youtube.com/@namiupcreative", icon: YoutubeIcon },
-  { label: "Facebook", href: "https://facebook.com/namicreativeuk", icon: FacebookIcon },
-];
+const socialIcons = {
+  linkedin: LinkedinIcon,
+  instagram: InstagramIcon,
+  youtube: YoutubeIcon,
+  facebook: FacebookIcon,
+} as const;
+
+const socials = brand.socials
+  .filter((s) => s.icon in socialIcons)
+  .map((s) => ({
+    label: s.label,
+    href: s.href,
+    icon: socialIcons[s.icon as keyof typeof socialIcons],
+  }));
 
 export function SiteFooter() {
   return (
@@ -25,32 +34,31 @@ export function SiteFooter() {
       <div className="container-shell py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div className="space-y-4">
-            <Link href="/" aria-label="NAMI Creative · home" className="inline-flex -ml-2 items-center transition-opacity duration-300 hover:opacity-80">
+            <Link href="/" aria-label={`${brand.name} · home`} className="inline-flex -ml-2 items-center transition-opacity duration-300 hover:opacity-80">
               <Image
-                src="/Nami-Logo.png"
-                alt="NAMI Creative"
+                src="/logo.svg"
+                alt={brand.name}
                 width={200}
                 height={40}
                 className="h-8 w-auto md:h-9"
               />
             </Link>
             <p className="max-w-xs text-sm text-fg-muted leading-relaxed">
-              Brand, content, and growth systems for founders. Waves of
-              creative impact, built to carry on without you.
+              {brand.description}
             </p>
             <p className="max-w-xs text-xs uppercase tracking-[0.32em] text-fg-subtle pt-1">
-              Waves of creative impact.
+              {brand.tagline}
             </p>
             <ul className="flex items-center gap-3 pt-4">
               {socials.map((s) => {
                 const Icon = s.icon;
                 return (
-                  <li key={s.href}>
+                  <li key={s.label}>
                     <a
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`NAMI Creative on ${s.label}`}
+                      aria-label={`${brand.name} on ${s.label}`}
                       className="inline-grid size-11 place-items-center rounded-full border border-line text-fg-muted transition-colors hover:border-accent hover:text-accent"
                     >
                       <Icon size={16} aria-hidden />
@@ -89,7 +97,7 @@ export function SiteFooter() {
       <div className="border-t border-line">
         <div className="container-shell flex flex-col gap-3 py-6 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-fg-subtle">
-            © {new Date().getFullYear()} NAMI Creative. Built from Newcastle upon Tyne. Working globally.
+            © {new Date().getFullYear()} {brand.legalName}. {brand.servesText}.
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-fg-subtle">
             <li>

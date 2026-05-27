@@ -5,15 +5,15 @@ export type Value = {
 
 export const values: Value[] = [
   {
-    title: "Branding is infrastructure",
-    body: "Identity systems aren't decoration. They're the load-bearing structure for content, marketing, and growth. Build the foundation properly and everything on top moves faster.",
+    title: "Your first principle",
+    body: "State a belief that shapes how the studio works. One or two sentences. Replace this placeholder with something specific to the brand.",
   },
   {
-    title: "Clarity over volume",
-    body: "Sharp positioning beats more output every time. We'd rather ship one piece that lands than five that drift. Volume is what you earn after clarity, not before.",
+    title: "Your second principle",
+    body: "A second principle that explains what the studio prioritises and why. Keep it concrete and grounded in how the work actually gets done.",
   },
   {
-    title: "Systems compound, posts decay",
-    body: "Anyone can ship a post. Few build engines. We design for the second order: formats, frameworks, and pipelines so today's work makes tomorrow's easier.",
+    title: "Your third principle",
+    body: "A third principle that sets expectations for clients. Say what the studio stands for and what it refuses to do.",
   },
 ];

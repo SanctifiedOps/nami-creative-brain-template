@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { Mail, Link as LinkIcon, Check } from "lucide-react";
 import { LinkedinIcon, XIcon } from "@/components/icons/socials";
+import { brand } from "@/lib/brand";
 
 // Always share the canonical production URL, even when this component
-// renders on localhost. Readers should land on namicreative.co.uk, not
+// renders on localhost. Readers should land on the live site, not
 // the dev server.
-const SITE_URL = "https://namicreative.co.uk";
+const SITE_URL = brand.url;
 
 type Props = {
   slug: string;

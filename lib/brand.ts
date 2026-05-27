@@ -1,66 +1,66 @@
 /**
  * ─────────────────────────────────────────────────────────────────────────
- * BRAND CONFIG — the single swap-point for a new client site.
+ * BRAND CONFIG - the single swap-point for a new client site.
  * ─────────────────────────────────────────────────────────────────────────
  *
  * This file holds the brand's textual identity + links. Editing it (plus the
  * three sibling swap points below) re-skins the whole template:
  *
  *   1. lib/brand.ts        ← you are here  (name, domain, email, socials, copy)
- *   2. app/globals.css      → the @theme block  (colours, surfaces, accents)
- *   3. lib/fonts.ts         → the typeface(s)
+ *   2. app/globals.css     → the @theme block  (colours, surfaces, accents)
+ *   3. lib/fonts.ts        → the typeface(s)
  *   4. public/ + lib/content/* → logo, OG image, favicon, and the content
- *                                modules (services, work, faq, testimonials…)
+ *                                modules (services, work, faq, testimonials)
  *
- * The values below are NAMI Creative's, kept as the worked example. Run the
- * discovery flow in CONTEXT/discovery.md to source a client's real values,
- * then replace them. See CONTEXT/build-spec.md for the full re-skin checklist.
+ * The values below are neutral placeholders. Run the discovery flow in
+ * CONTEXT/discovery.md to source a client's real values, then replace them.
+ * See CONTEXT/build-spec.md for the full re-skin checklist.
  */
 
 export type SocialLink = {
   label: string;
   href: string;
-  /** Icon key — wire to your icon set in components/icons/socials.tsx */
+  /** Icon key. Wire to your icon set in components/icons/socials.tsx */
   icon: "linkedin" | "instagram" | "youtube" | "facebook" | "x" | "tiktok";
 };
 
 export const brand = {
   /** Display name used in copy + metadata. */
-  name: "NAMI Creative",
+  name: "Studio",
   /** Legal/trading name, for footer + legal pages. */
-  legalName: "NAMI Creative",
+  legalName: "Studio Ltd",
   /** Short name for tight spaces. */
-  shortName: "NAMI",
+  shortName: "Studio",
 
   /** Production domain (no protocol) + full URL (with protocol). */
-  domain: "namicreative.co.uk",
-  url: "https://namicreative.co.uk",
+  domain: "yourstudio.com",
+  url: "https://yourstudio.com",
 
   /** Primary contact inbox. */
-  email: "hello@namicreative.co.uk",
+  email: "hello@yourstudio.com",
 
   /** Where the studio is based + market served. */
-  location: "Newcastle upon Tyne, UK",
-  servesText: "Working globally",
+  location: "Your City, Country",
+  servesText: "Working with clients everywhere",
 
   /** One-line positioning + the brand promise. */
-  tagline: "Creative systems built for real-world momentum.",
-  promise: "We Build Brands That Move With Meaning.",
+  tagline: "Your one-line positioning goes here.",
+  promise: "The promise your brand makes, in one line.",
 
-  /** Default <meta description> — keep ~150–160 chars. */
+  /** Default <meta description>. Keep ~150 to 160 chars. */
   description:
-    "Independent creative studio for founders, working globally. One creative partner across brand strategy, content systems, websites, visual direction, and growth automation.",
+    "A creative studio template. Replace this with your studio's positioning across brand, design, websites, and growth.",
 
   /** Locale for openGraph + html lang. */
   locale: "en_GB",
   lang: "en",
 
-  /** Social profiles rendered in the footer. */
+  /** Social profiles rendered in the footer. Set real URLs per client. */
   socials: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/company/98101073", icon: "linkedin" },
-    { label: "Instagram", href: "https://www.instagram.com/namicreativeuk/", icon: "instagram" },
-    { label: "YouTube", href: "https://www.youtube.com/@namiupcreative", icon: "youtube" },
-    { label: "Facebook", href: "https://facebook.com/namicreativeuk", icon: "facebook" },
+    { label: "LinkedIn", href: "#", icon: "linkedin" },
+    { label: "Instagram", href: "#", icon: "instagram" },
+    { label: "YouTube", href: "#", icon: "youtube" },
+    { label: "Facebook", href: "#", icon: "facebook" },
   ] satisfies SocialLink[],
 } as const;
 

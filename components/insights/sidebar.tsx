@@ -38,7 +38,7 @@ export function InsightsSidebar({
       variants={stage}
       className={cn("space-y-8", className)}
     >
-      {/* Newsletter signup — compact card variant */}
+      {/* Newsletter signup - compact card variant */}
       <motion.div variants={fadeUp}>
         <NewsletterSubscribe
           variant="card"
@@ -85,7 +85,7 @@ export function InsightsSidebar({
         </motion.div>
       )}
 
-      {/* Tags / topics widget — clickable, links to filtered topic page */}
+      {/* Tags / topics widget - clickable, links to filtered topic page */}
       {tags && tags.length > 0 && (
         <motion.div
           variants={fadeUp}
@@ -114,8 +114,8 @@ export function InsightsSidebar({
       >
         <p className="eyebrow mb-3">From the studio</p>
         <p className="text-sm text-fg-muted leading-relaxed mb-5">
-          Creative Waves: studio notes from NAMI Creative. Brand, content,
-          and systems for founders building something deliberate.
+          Notes from inside the studio on brand, content, and systems. Replace
+          this placeholder with a short line about your writing.
         </p>
         <Link
           href="/work"

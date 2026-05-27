@@ -22,16 +22,16 @@ export function PositioningBand() {
           className="mx-auto max-w-3xl text-center text-[clamp(1.4rem,3vw,2.25rem)] font-medium leading-tight tracking-tight text-fg"
           variants={blurUp}
         >
-          Your brand is stitched together. Your marketing is inconsistent. Your
-          tracking is fragmented. And you&apos;re the one{" "}
-          <span className="text-gradient">holding it all together.</span>
+          A bold positioning statement that names the problem your clients
+          face and the shift you{" "}
+          <span className="text-gradient">help them make.</span>
         </motion.p>
         <motion.p
           className="mx-auto mt-6 max-w-xl text-center text-fg-muted md:text-lg"
           variants={fadeUp}
         >
-          We build self-sustaining creative ecosystems. So your brand, content,
-          and systems run as one, backing you up as you scale.
+          A short supporting line that explains how the studio brings brand,
+          content, and systems together. Replace this placeholder copy.
         </motion.p>
       </motion.div>
     </section>

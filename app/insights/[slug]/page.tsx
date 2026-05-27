@@ -35,7 +35,7 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
   if (!post) return { title: "Not found" };
   return {
-    title: `${post.title} · Creative Waves`,
+    title: `${post.title} · Insights`,
     description: post.summary,
     openGraph: {
       title: post.title,
@@ -73,13 +73,13 @@ export default async function InsightPostPage({
           }),
           buildBreadcrumbSchema([
             { name: "Home", url: "/" },
-            { name: "Creative Waves", url: "/insights" },
+            { name: "Insights", url: "/insights" },
             { name: post.title, url: `/insights/${post.slug}` },
           ]),
         ]}
       />
       <PageHero
-        eyebrow={`Creative Waves · ${post.pillar}`}
+        eyebrow={`Insights · ${post.pillar}`}
         title={post.title}
         lead={post.subtitle ?? post.summary}
       />

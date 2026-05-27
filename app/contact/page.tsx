@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import { ArrowUpRight, Mail, Calendar } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
+import { brand } from "@/lib/brand";
 import { stage, fadeUp } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -95,7 +96,7 @@ export default function ContactPage() {
             className="space-y-6"
             noValidate
           >
-            {/* Honeypot — kept off-screen rather than display:none so bots
+            {/* Honeypot - kept off-screen rather than display:none so bots
                 that skip hidden inputs still fill it. */}
             <div
               aria-hidden
@@ -202,10 +203,10 @@ export default function ContactPage() {
                 >
                   {errorMsg} If it persists, email{" "}
                   <a
-                    href="mailto:hello@namicreative.co.uk"
+                    href={`mailto:${brand.email}`}
                     className="underline underline-offset-4 hover:text-fg transition-colors"
                   >
-                    hello@namicreative.co.uk
+                    {brand.email}
                   </a>
                   .
                 </p>
@@ -244,10 +245,10 @@ export default function ContactPage() {
                 Direct route. Same response time, less form filling.
               </p>
               <a
-                href="mailto:hello@namicreative.co.uk"
+                href={`mailto:${brand.email}`}
                 className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fg hover:text-accent transition-colors"
               >
-                hello@namicreative.co.uk
+                {brand.email}
                 <ArrowUpRight
                   size={12}
                   aria-hidden
@@ -269,7 +270,7 @@ export default function ContactPage() {
                 can help. No pitch deck.
               </p>
               <a
-                href="https://calendly.com/hello-nami"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fg hover:text-accent transition-colors"

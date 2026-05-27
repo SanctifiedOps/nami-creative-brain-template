@@ -75,7 +75,7 @@ export const blurUp: Variants = {
   },
 };
 
-/** Clip-path wipe reveal — for media/images. Reveals from the bottom up. */
+/** Clip-path wipe reveal - for media/images. Reveals from the bottom up. */
 export const clipUp: Variants = {
   hidden: { clipPath: "inset(0 0 100% 0)", opacity: 0 },
   show: {

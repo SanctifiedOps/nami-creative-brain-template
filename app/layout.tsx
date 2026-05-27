@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { brand } from "@/lib/brand";
 import { instrumentSans } from "@/lib/fonts";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -16,24 +17,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "NAMI Creative · Independent creative studio for founders",
-    template: "%s · NAMI Creative",
+    default: `${brand.name} · ${brand.tagline}`,
+    template: `%s · ${brand.name}`,
   },
-  description:
-    "Independent creative studio for founders, working globally from Newcastle. One partner across brand, content, websites, visual direction, and growth automation.",
+  description: brand.description,
   keywords: [
-    "creative studio for founders",
-    "brand and content studio",
-    "independent creative studio UK",
-    "brand strategy studio Newcastle",
-    "creative partner for founders",
-    "fractional creative director UK",
-    "brand and automation agency",
-    "self-sustaining creative ecosystem",
+    "creative studio",
+    "brand studio",
+    "design studio",
+    "brand strategy",
+    "content systems",
+    "website design",
   ],
-  metadataBase: new URL("https://namicreative.co.uk"),
+  metadataBase: new URL(brand.url),
   // Bing/Webmaster site-ownership token. Per-site value; set
-  // NEXT_PUBLIC_BING_SITE_VERIFICATION in env once the client's
+  // NEXT_PUBLIC_BING_SITE_VERIFICATION in env once the
   // Webmaster account is verified. Renders nothing when unset.
   ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
     ? {
@@ -46,32 +44,28 @@ export const metadata: Metadata = {
     : {}),
   openGraph: {
     type: "website",
-    locale: "en_GB",
-    title: "NAMI Creative · Brand, Content, Systems",
-    description:
-      "Self-sustaining creative ecosystems for founders. One studio across brand, content, websites, visual direction, and growth automation.",
+    locale: brand.locale,
+    title: `${brand.name} · ${brand.tagline}`,
+    description: brand.description,
     images: [
       {
-        url: "/assets/images/Nami-OG-v2.png",
+        url: "/og.svg",
         width: 1600,
         height: 1000,
-        alt: "NAMI Creative · Self-sustaining creative ecosystems for founders",
+        alt: `${brand.name} · ${brand.tagline}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NAMI Creative · Brand, Content, Systems",
-    description:
-      "Self-sustaining creative ecosystems for founders. One studio across brand, content, websites, visual direction, and growth automation.",
-    images: ["/assets/images/Nami-OG-v2.png"],
+    title: `${brand.name} · ${brand.tagline}`,
+    description: brand.description,
+    images: ["/og.svg"],
   },
   icons: {
-    icon: [
-      { url: "/assets/images/nami-fav.png", type: "image/png" },
-    ],
-    shortcut: "/assets/images/nami-fav.png",
-    apple: "/assets/images/nami-fav.png",
+    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 

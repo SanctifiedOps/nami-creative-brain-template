@@ -6,12 +6,12 @@ import { SectionHeading } from "@/components/sections/section-heading";
 export const metadata: Metadata = {
   title: "Process · Discovery, design, launch, partnership",
   description:
-    "Four phases inside a NAMI engagement. Strategic discovery and positioning. Design and build of brand, content, and website. Launch and integration. Ongoing partnership for content, automation, and creative direction.",
+    "Four phases inside a studio engagement. Strategic discovery and positioning. Design and build of brand, content, and website. Launch and integration. Ongoing partnership.",
   keywords: [
-    "creative agency process",
+    "creative studio process",
     "brand engagement process",
-    "design and build process UK",
-    "founder brand engagement",
+    "design and build process",
+    "brand engagement",
   ],
 };
 

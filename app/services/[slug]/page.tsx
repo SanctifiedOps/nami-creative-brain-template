@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { services, getService } from "@/lib/content/services";
 import { getServiceFaq } from "@/lib/content/faq";
+import { brand } from "@/lib/brand";
 import { PageHero } from "@/components/sections/page-hero";
 import { FAQAccordion } from "@/components/sections/faq-accordion";
 import { SpotlightCard } from "@/components/motion/spotlight-card";
@@ -36,12 +37,12 @@ export async function generateMetadata({
     description: `${service.tagline} ${service.description}`,
     keywords: [
       `${service.title.toLowerCase()} studio`,
-      `${service.pillar.toLowerCase()} agency UK`,
-      `${service.pillar.toLowerCase()} for founders`,
-      `${service.title.toLowerCase()} Newcastle`,
+      `${service.pillar.toLowerCase()} agency`,
+      `${service.pillar.toLowerCase()} for businesses`,
+      `${service.title.toLowerCase()} services`,
     ],
     openGraph: {
-      title: `${service.title} · NAMI Creative`,
+      title: `${service.title} · ${brand.name}`,
       description: service.tagline,
     },
   };
@@ -125,7 +126,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Deliverables — numbered readout */}
+      {/* Deliverables - numbered readout */}
       <section className="border-t border-line bg-surface-1/40 py-20 md:py-28">
         <div className="container-shell">
           <SectionIntro
@@ -142,7 +143,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Where it fits — the five-pillar map */}
+      {/* Where it fits - the five-pillar map */}
       <section className="container-shell border-t border-line py-20 md:py-28">
         <div className="mb-12 max-w-2xl">
           <p className="mono-label mb-4">Where it fits</p>
@@ -158,7 +159,7 @@ export default async function ServiceDetailPage({
         <PillarMap currentSlug={service.slug} />
       </section>
 
-      {/* FAQ — sticky two-column */}
+      {/* FAQ - sticky two-column */}
       <section className="container-shell border-t border-line py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">

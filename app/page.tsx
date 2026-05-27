@@ -24,7 +24,7 @@ export default async function Home() {
 
       <PositioningBand />
 
-      {/* SERVICES — stacked-left intro, plain surface */}
+      {/* SERVICES - stacked-left intro, plain surface */}
       <section className="container-shell py-28 md:py-40">
         <SectionIntro
           index="01 / What we build"
@@ -32,25 +32,25 @@ export default async function Home() {
             <>
               One studio for the five pieces that should{" "}
               <span className="text-gradient sm:block">
-                never have been split.
+                work as one.
               </span>
             </>
           }
-          lead="Most teams hire a brand designer, a content person, a web developer, and an automations freelancer. None of them see the others' work. We build all five so nothing falls between them."
+          lead="A short paragraph explaining how the studio brings brand, content, websites, visual direction, and growth systems together. Replace this placeholder with your own framing."
         />
         <div className="mt-16 md:mt-20">
           <ServicesGrid />
         </div>
       </section>
 
-      {/* PROCESS — pinned scroll storytelling, tinted surface */}
+      {/* PROCESS - pinned scroll storytelling, tinted surface */}
       <section className="border-t border-line bg-surface-1/30 py-28 md:py-40">
         <div className="container-shell">
           <ProcessScroll />
         </div>
       </section>
 
-      {/* SELECTED WORK — centred intro */}
+      {/* SELECTED WORK - centred intro */}
       <section className="container-shell border-t border-line py-28 md:py-40">
         <SectionIntro
           align="center"
@@ -61,7 +61,7 @@ export default async function Home() {
               <span className="text-gradient sm:block">shipped as one.</span>
             </>
           }
-          lead="Five engagements. On-chain intelligence, members-only experiences, community brands, conversion funnels, and a national trade body. Different sectors, same principle: integrated at strategy, not stitched at handoff."
+          lead="A short paragraph introducing the selected work below. Replace this placeholder with a line about the kind of projects the studio takes on."
           className="mb-16 md:mb-20"
         />
 
@@ -85,10 +85,10 @@ export default async function Home() {
       {/* TESTIMONIALS */}
       <Testimonials />
 
-      {/* CREATIVE WAVES — recent insights */}
+      {/* CREATIVE WAVES - recent insights */}
       <RecentInsights posts={recent} />
 
-      {/* FAQ — sticky-left, accordion right */}
+      {/* FAQ - sticky-left, accordion right */}
       <section className="container-shell border-t border-line py-28 md:py-40">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">

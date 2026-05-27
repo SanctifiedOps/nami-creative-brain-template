@@ -7,12 +7,12 @@ import { WorkGrid } from "@/components/sections/work-grid";
 export const metadata: Metadata = {
   title: "Selected work · Brand, content, and conversion case studies",
   description:
-    "Five engagements where brand, content, and systems shipped as one. On-chain intelligence (MILLIONS), UK members clubs (The League), community brands (Barking Puppy), DTC conversion funnels (VESSL), and a national trade body (Energy Consultants Association).",
+    "Selected projects where brand, content, and systems shipped as one. Replace these placeholder case studies with the studio's own work.",
   keywords: [
     "creative studio case studies",
-    "brand strategy case studies UK",
+    "brand strategy case studies",
     "conversion funnel case studies",
-    "boutique brand studio work",
+    "brand studio work",
   ],
 };
 
@@ -29,7 +29,7 @@ export default function WorkPage() {
             </span>
           </>
         }
-        lead="Five engagements across on-chain intelligence, UK members clubs, community brands, conversion funnels, and a national trade body. Different sectors, same principle: brand, content, product, and systems designed against each other, not stitched at handoff."
+        lead="A short paragraph introducing the studio's selected work. Replace this placeholder with a line about the kind of projects and sectors the studio takes on."
       />
 
       <section className="container-shell py-24 md:py-32">

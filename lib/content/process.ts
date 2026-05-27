@@ -10,9 +10,9 @@ export const processSteps: ProcessStep[] = [
   {
     number: "01",
     title: "Discovery + positioning",
-    duration: "Weeks 1–2",
+    duration: "Weeks 1 to 2",
     summary:
-      "Get inside the business, uncover what's true, and lock the strategic narrative.",
+      "Get inside the business, learn what is true, and lock the strategic narrative.",
     detail: [
       "Stakeholder + customer interviews",
       "Market + competitor audit",
@@ -23,13 +23,13 @@ export const processSteps: ProcessStep[] = [
   {
     number: "02",
     title: "Design + build",
-    duration: "Weeks 3–6",
+    duration: "Weeks 3 to 6",
     summary:
-      "Translate strategy into an applied system: visual identity, content, and the website that carries them.",
+      "Turn strategy into an applied system: visual identity, content, and the website that carries them.",
     detail: [
       "Visual identity + design tokens",
       "Content format + platform plan",
-      "Conversion-led website build",
+      "Website build",
       "Brand book + applied guidelines",
     ],
   },
@@ -51,7 +51,7 @@ export const processSteps: ProcessStep[] = [
     title: "Scale + evolve",
     duration: "Ongoing partnership",
     summary:
-      "Stay close. Refine what's working, kill what isn't, and grow the system as the business grows.",
+      "Stay close. Refine what is working, retire what is not, and grow the system as the business grows.",
     detail: [
       "Monthly creative direction",
       "Content pipeline support",

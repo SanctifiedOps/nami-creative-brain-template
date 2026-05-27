@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { primaryNav, ctaNav } from "@/lib/nav";
+import { brand } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 
 export function MobileDrawer() {
@@ -71,12 +72,12 @@ export function MobileDrawer() {
                 <Link
                   href="/"
                   onClick={() => setOpen(false)}
-                  aria-label="NAMI Creative · home"
+                  aria-label={`${brand.name} · home`}
                   className="inline-flex items-center transition-opacity duration-300 hover:opacity-80"
                 >
                   <Image
-                    src="/Nami-Logo.png"
-                    alt="NAMI Creative"
+                    src="/logo.svg"
+                    alt={brand.name}
                     width={200}
                     height={40}
                     className="h-7 w-auto"

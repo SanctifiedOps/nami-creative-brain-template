@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Privacy",
-  description:
-    "How NAMI Creative collects, uses, and protects your information. Plain English, GDPR-aligned.",
+  description: `How ${brand.name} collects, uses, and protects your information.`,
   robots: { index: true, follow: true },
 };
 
-const UPDATED = "6 May 2026";
+const UPDATED = "Add a date";
 
 export default function PrivacyPage() {
   return (
@@ -28,21 +28,26 @@ export default function PrivacyPage() {
         <article className="prose-legal mx-auto max-w-3xl space-y-10 text-fg-muted leading-relaxed">
           <p className="text-sm text-fg-subtle">Last updated: {UPDATED}</p>
 
+          <p className="rounded-xl border border-line bg-surface-1/40 p-4 text-sm text-fg-subtle">
+            Placeholder legal copy. Review this notice with a qualified adviser
+            and tailor it to your jurisdiction, vendors, and data practices
+            before publishing.
+          </p>
+
           <Block title="Who we are">
             <p>
-              NAMI Creative (&ldquo;NAMI&rdquo;, &ldquo;we&rdquo;,
-              &ldquo;us&rdquo;) is a UK-based creative studio operating from
-              England. For the purposes of UK GDPR and the Data Protection Act
-              2018, we are the data controller for personal data you share
-              with us through this site.
+              {brand.legalName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is a
+              creative studio. For the purposes of applicable data protection
+              law, we are the data controller for personal data you share with
+              us through this site.
             </p>
             <p>
               Contact us at{" "}
               <a
-                href="mailto:hello@namicreative.co.uk"
+                href={`mailto:${brand.email}`}
                 className="text-fg hover:text-accent transition-colors"
               >
-                hello@namicreative.co.uk
+                {brand.email}
               </a>
               .
             </p>
@@ -103,23 +108,20 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc space-y-2 pl-5">
               <li>
-                <strong className="text-fg">Mailchimp</strong> (Intuit Inc.,
-                USA, under UK-EU SCCs): newsletter delivery and contact form
-                intake.
+                <strong className="text-fg">Mailchimp</strong>: newsletter
+                delivery and contact form intake.
               </li>
               <li>
-                <strong className="text-fg">Make.com</strong> (Celonis SE, EU):
-                workflow automation between site, Mailchimp, and our internal
-                tools.
+                <strong className="text-fg">Make.com</strong>: workflow
+                automation between the site, Mailchimp, and internal tools.
               </li>
               <li>
-                <strong className="text-fg">Calendly</strong> (Calendly LLC,
-                USA, under UK-EU SCCs): discovery call scheduling, only if you
-                choose to book one.
+                <strong className="text-fg">A scheduling tool</strong>:
+                discovery call scheduling, only if you choose to book one.
               </li>
               <li>
-                <strong className="text-fg">Google Analytics</strong> (Google
-                LLC, USA, under UK-EU SCCs): aggregated site usage analytics.
+                <strong className="text-fg">Google Analytics</strong>:
+                aggregated site usage analytics.
               </li>
               <li>
                 <strong className="text-fg">Hosting provider</strong>: serves
@@ -149,7 +151,7 @@ export default function PrivacyPage() {
           </Block>
 
           <Block title="Your rights">
-            <p>Under UK GDPR you can ask us to:</p>
+            <p>Depending on where you live, you may be able to ask us to:</p>
             <ul className="list-disc space-y-2 pl-5">
               <li>Access the personal data we hold about you.</li>
               <li>Correct inaccurate data, or complete incomplete data.</li>
@@ -161,23 +163,14 @@ export default function PrivacyPage() {
             <p>
               Email{" "}
               <a
-                href="mailto:hello@namicreative.co.uk"
+                href={`mailto:${brand.email}`}
                 className="text-fg hover:text-accent transition-colors"
               >
-                hello@namicreative.co.uk
+                {brand.email}
               </a>{" "}
-              and we will respond within one calendar month. If we get it
-              wrong, you can complain to the UK Information Commissioner&rsquo;s
-              Office at{" "}
-              <a
-                href="https://ico.org.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-fg hover:text-accent transition-colors"
-              >
-                ico.org.uk
-              </a>
-              .
+              and we will respond within the timeframe required by your local
+              data protection law. You may also have the right to complain to
+              your local data protection regulator.
             </p>
           </Block>
 

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { brand } from "@/lib/brand";
 
 export type JsonLdSchema = Record<string, unknown>;
 
@@ -28,13 +29,13 @@ export function JsonLd({
   );
 }
 
-const SITE_URL = "https://namicreative.co.uk";
-const STUDIO_NAME = "NAMI Creative";
-const FOUNDER_NAME = "Joe Wilson";
-const STUDIO_EMAIL = "hello@namicreative.co.uk";
-const STUDIO_LOGO = `${SITE_URL}/assets/images/nami-fav.png`;
-const STUDIO_OG = `${SITE_URL}/assets/images/Nami-OG-v2.png`;
-const STUDIO_LINKEDIN = "https://www.linkedin.com/in/brandingbyjoewilson/";
+const SITE_URL = brand.url;
+const STUDIO_NAME = brand.name;
+const FOUNDER_NAME = "Studio founder";
+const STUDIO_EMAIL = brand.email;
+const STUDIO_LOGO = `${SITE_URL}/logo.svg`;
+const STUDIO_OG = `${SITE_URL}/og.svg`;
+const STUDIO_LINKEDIN = brand.socials.find((s) => s.icon === "linkedin")?.href ?? "#";
 
 /**
  * The Organization is the root identity. Everything else (Person,
@@ -53,34 +54,16 @@ export const organizationSchema: JsonLdSchema = {
     height: 512,
   },
   image: STUDIO_OG,
-  description:
-    "Independent creative studio for founders. Brand strategy, content systems, websites, visual direction, and growth automation, delivered as one engagement with one creative partner.",
-  founder: { "@id": `${SITE_URL}/about#joe-wilson` },
+  description: brand.description,
+  founder: { "@id": `${SITE_URL}/about#founder` },
   email: STUDIO_EMAIL,
   sameAs: [STUDIO_LINKEDIN],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Regent Road",
-    addressLocality: "Jarrow",
-    addressRegion: "Tyne and Wear",
-    postalCode: "NE32 5XQ",
-    addressCountry: "GB",
-  },
-  areaServed: [
-    { "@type": "City", name: "Newcastle upon Tyne" },
-    { "@type": "City", name: "Jarrow" },
-    { "@type": "City", name: "Gateshead" },
-    { "@type": "City", name: "Sunderland" },
-    { "@type": "AdministrativeArea", name: "Tyne and Wear" },
-    { "@type": "AdministrativeArea", name: "North East England" },
-    { "@type": "Country", name: "United Kingdom" },
-    { "@type": "Place", name: "Worldwide" },
-  ],
+  areaServed: [{ "@type": "Place", name: "Worldwide" }],
 };
 
 /**
  * LocalBusiness for local discovery (Google Business Profile, AI overview
- * local intent). Same NAP as Organization but typed for local schema
+ * local intent). Same identity as Organization but typed for local schema
  * parsers. ProfessionalService is the closest fit for a creative studio.
  */
 export const localBusinessSchema: JsonLdSchema = {
@@ -91,27 +74,9 @@ export const localBusinessSchema: JsonLdSchema = {
   url: SITE_URL,
   image: STUDIO_OG,
   email: STUDIO_EMAIL,
-  description:
-    "North East England creative studio based in Jarrow, Tyne and Wear. Brand, content, websites, and growth systems for founders, built by one creative partner. Serving Newcastle, Tyneside, and clients worldwide.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Regent Road",
-    addressLocality: "Jarrow",
-    addressRegion: "Tyne and Wear",
-    postalCode: "NE32 5XQ",
-    addressCountry: "GB",
-  },
-  areaServed: [
-    { "@type": "City", name: "Newcastle upon Tyne" },
-    { "@type": "City", name: "Jarrow" },
-    { "@type": "City", name: "Gateshead" },
-    { "@type": "City", name: "Sunderland" },
-    { "@type": "AdministrativeArea", name: "Tyne and Wear" },
-    { "@type": "AdministrativeArea", name: "North East England" },
-    { "@type": "Country", name: "United Kingdom" },
-    { "@type": "Place", name: "Worldwide" },
-  ],
-  priceRange: "££££",
+  description: brand.description,
+  areaServed: [{ "@type": "Place", name: "Worldwide" }],
+  priceRange: "$$$$",
   sameAs: [STUDIO_LINKEDIN],
 };
 
@@ -121,8 +86,7 @@ export const websiteSchema: JsonLdSchema = {
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
   name: STUDIO_NAME,
-  description:
-    "NAMI Creative. One studio for founders across brand, content, and growth systems.",
+  description: brand.description,
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "en-GB",
 };
@@ -130,18 +94,18 @@ export const websiteSchema: JsonLdSchema = {
 export const founderPersonSchema: JsonLdSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${SITE_URL}/about#joe-wilson`,
+  "@id": `${SITE_URL}/about#founder`,
   name: FOUNDER_NAME,
   url: `${SITE_URL}/about`,
-  image: `${SITE_URL}/assets/images/bb.jpg`,
-  jobTitle: "Founder, NAMI Creative",
+  image: `${SITE_URL}/placeholder-portrait.svg`,
+  jobTitle: `Founder, ${STUDIO_NAME}`,
   worksFor: { "@id": `${SITE_URL}/#organization` },
   sameAs: [STUDIO_LINKEDIN],
 };
 
 /**
  * Build a FAQPage schema from a list of Q&A pairs. Used on any page that
- * surfaces NAMI's FAQ accordion — homepage, services, each service detail.
+ * surfaces the FAQ accordion: homepage, services, each service detail.
  */
 export function buildFaqPageSchema(
   qa: { question: string; answer: string }[],
@@ -256,7 +220,7 @@ export function buildArticleSchema(args: {
     dateModified: new Date(args.datePublished).toISOString(),
     author: {
       "@type": "Person",
-      "@id": `${SITE_URL}/about#joe-wilson`,
+      "@id": `${SITE_URL}/about#founder`,
       name: FOUNDER_NAME,
       url: `${SITE_URL}/about`,
     },

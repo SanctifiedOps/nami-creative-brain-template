@@ -31,7 +31,7 @@ export async function generateMetadata({
   if (!study) return { title: "Not found" };
   return {
     title: `${study.client} · ${study.sector} case study`,
-    description: `${study.oneLiner} A ${study.status.toLowerCase()} engagement from NAMI Creative spanning ${study.pillars.join(", ").toLowerCase()}.`,
+    description: `${study.oneLiner} A ${study.status.toLowerCase()} engagement spanning ${study.pillars.join(", ").toLowerCase()}.`,
     keywords: [
       ...study.pillars.map((p) => `${p.toLowerCase()} case study`),
       `${study.sector.toLowerCase()} agency`,
@@ -89,7 +89,7 @@ export default async function CaseStudyPage({
         lead={study.oneLiner}
       />
 
-      {/* Meta — editorial dossier line */}
+      {/* Meta - editorial dossier line */}
       <section className="container-shell py-14 md:py-20">
         <div className="flex flex-col gap-12 border-b border-line pb-14 md:flex-row md:items-end md:justify-between md:gap-20">
           <dl className="grid grid-cols-2 gap-x-12 gap-y-10 sm:flex sm:flex-wrap sm:gap-x-20">
@@ -174,14 +174,14 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      {/* Approach — connected numbered sequence */}
+      {/* Approach - connected numbered sequence */}
       <section className="border-t border-line bg-surface-1/40 py-20 md:py-28">
         <div className="container-shell">
           <ApproachSteps steps={study.approach} />
         </div>
       </section>
 
-      {/* Deliverables — numbered readout */}
+      {/* Deliverables - numbered readout */}
       <section className="container-shell border-t border-line py-20 md:py-28">
         <div className="mb-12 max-w-2xl md:mb-16">
           <p className="mono-label mb-4">What shipped</p>
@@ -193,7 +193,7 @@ export default async function CaseStudyPage({
         <DeliverablesList items={study.deliverables} />
       </section>
 
-      {/* Outcomes — bold metrics readout */}
+      {/* Outcomes - bold metrics readout */}
       {study.outcomes && study.outcomes.length > 0 && (
         <section className="relative overflow-hidden border-t border-line bg-surface-1/40 py-20 md:py-28">
           <div aria-hidden className="hairline-grid absolute inset-0 opacity-40" />
