@@ -100,7 +100,7 @@ No real secrets in this repo, ever. `.env.example` is placeholders only. Real ke
 
 Built by **NAMI Creative** — a one-person creative studio: brand, content, websites, visual direction, and growth automation, built by the same hands.
 
-The `.claude/skills/` library bundles open-source skills from their respective authors; their individual licences apply within each skill directory. The NAMI template code, design system, and `CONTEXT/` build IP are NAMI Creative's.
+The `.claude/skills/` library bundles open-source skills from their respective authors; their individual licences apply within each skill directory. Full attribution is in [`CREDITS.md`](CREDITS.md). The NAMI template code, design system, and `CONTEXT/` build IP are NAMI Creative's.
 
 ---
 
