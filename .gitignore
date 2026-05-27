@@ -1,0 +1,54 @@
+# dependencies
+node_modules
+.pnp
+.pnp.*
+
+# next.js
+.next/
+out/
+next-env.d.ts
+
+# production
+build
+dist
+dist-ssr
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+*.pem
+
+# local env — NEVER commit real secrets (see .env.example + DEPLOY.md)
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# tooling
+.netlify
+.vercel
+
+# claude — skills ARE committed (they are the point of this template).
+# Only local/runtime claude files are ignored.
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+
+# source video files — too large for git; compressed outputs live in /public/assets/videos
+public/assets/images/Video/
