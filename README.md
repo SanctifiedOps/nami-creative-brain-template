@@ -2,9 +2,9 @@
 
 # NAMI Creative Big Brain
 
-### A full creative agency, packed into a toolkit you clone.
+### Drop in a client. Get a brand, a website, and the marketing engine that runs it.
 
-There is **no template site** in this repo. There is a structured workflow + 93 Claude skills that let you research a client from a single launch prompt, design their brand, build their website from scratch fit to their industry, then run the marketing operation that follows. One operator, premium output, every build a fresh build.
+A full creative agency packed into one repo. 93 Claude skills plus a structured workflow that turns one paragraph about a client into research, positioning, a custom-built site, and the ongoing marketing operation that runs underneath it. Every build a fresh build. Every site looks like its client.
 
 *Creative systems built for real-world momentum.*
 
@@ -12,26 +12,26 @@ There is **no template site** in this repo. There is a structured workflow + 93 
 
 ---
 
-## What this is (and what it is not)
+## The pitch
 
-**Not a template.** No pre-built site, no NAMI house design, no "Studio" placeholder pages sitting there waiting to be edited. Cloning this repo gives you no website. That is deliberate. Templates bias every project toward the template's aesthetic, and that is exactly the failure mode this toolkit was built to avoid.
+You hand Claude a client. Name, sector, what they want. Claude researches them, profiles their competitors, lands on positioning, designs a brand and a stack that fit *this specific client*, builds the site, ships it, then offers to run the SEO, content, ads, email, and CRO that turn the launch into recurring revenue.
 
-**A toolkit.** Cloning this gives you (a) all 93 Claude skills that handle design, frontend engineering, copy, SEO, ads, email, CRO, research, and pricing, and (b) the structured workflow in `CONTEXT/` that Claude follows: intake → research → discovery → brief gate → strategy → stack choice → build → verify → marketing.
+You stay the decision-maker. The workflow holds explicit approval gates at the brief and at the stack choice, so nothing ships you didn't sign off on. The 93 skills do the heavy lifting underneath, from senior-grade design polish to copy that doesn't read as AI-made.
 
-A homeowner's plumber site, a fintech SaaS, an Aesop-tier skincare brand, and a Solana memecoin community come out looking nothing alike. They should. The toolkit makes that easy, not the opposite.
+Same operator. Different industries. A tradesperson's site, a fintech SaaS, a luxury wellness brand, and a community PFP project come out of the same repo looking nothing alike.
 
 ## Who this is for
 
-- **Website designers** who want every build to start from real research about the client, not a recycled template.
-- **Vibe coders** who can ship fast with AI but watch every project drift toward the same look.
+- **Website designers** who want every build to start from real research about *this* client, with the polish and motion of a senior studio.
+- **Vibe coders** who ship fast with AI and want a system that takes them the last 10% to senior-bar quality.
 - **Freelancers and solo operators** who want to offer a full agency menu without becoming an agency.
-- **Small studios** that want every new project to start at a senior bar instead of from a blank file.
+- **Small studios** that want every new project to start at a higher floor than a blank file.
 
-If you can give Claude a one-paragraph brief about a client, you have everything you need to launch a build this weekend.
+If you can give Claude a paragraph about a client, you can ship their site this weekend and put them on a marketing retainer next month.
 
-## What this unlocks (the money part, spelled out)
+## What you can sell with it
 
-A normal freelance build is a one-time invoice. This toolkit turns one client into a recurring relationship, because the same skills that build the site also run everything that comes after it.
+A normal freelance build is a one-time invoice. This toolkit turns one client into recurring revenue, because the skills that built the site also run everything that comes after it.
 
 | You sell | Skills behind it | Why it sticks |
 |----------|------------------|---------------|
@@ -43,38 +43,31 @@ A normal freelance build is a one-time invoice. This toolkit turns one client in
 | Social + community | `social-content`, `community-marketing`, `referral-program` | Always-on deliverable. |
 | Competitive + pricing strategy | `competitive-teardown`, `competitor-profiling`, `pricing-strategy`, `revops` | Advisory work at advisory rates. |
 
-One repo. One operator. A full-service offer. You decide the prices; the toolkit decides the quality.
+One repo. One operator. A full-service offer. You decide the prices; the toolkit holds the quality bar.
 
-## What's inside
+## The launch flow
 
-- **`.claude/skills/`** — 93 Claude skills, auto-active. The full catalog below.
-- **`CLAUDE.md`** — the launch rules Claude reads first. Hard rule: there is no template to build on top of.
-- **`CONTEXT/workflow.md`** — the master nine-phase workflow Claude follows on every launch.
-- **`CONTEXT/discovery.md`** — the discovery question bank. Used in phase 3, after autonomous research.
-- **`CONTEXT/brand-brief.template.md`** — the brief shape. Phase 4 fills `brand-brief.md` from it; user approval is the gate.
-- **`CONTEXT/build-spec.md`** — the stack-agnostic quality bar every build ships against.
-- **`DEPLOY.md`** — deployment guidance for whatever stack the build settles on.
-- **`CREDITS.md`** — attribution for the bundled third-party skills.
+1. **You paste a launch prompt** about the client (template below). Claude reads the workflow and starts.
+2. **Research** runs autonomously: current presence, voice in the wild, three direct competitors, the sector reflex to avoid, market read.
+3. **Discovery** asks only the questions research couldn't answer: voice axes, real prices, refusals, real proof.
+4. **Brief gate.** Claude fills the brand brief from research + discovery and presents it for your explicit approval.
+5. **Strategy + stack gate.** Concrete decisions (positioning, voice, colour strategy, theme, type, motion, page set), then a stack recommendation with reasoning. You sign off before any code lands.
+6. **Build.** A design system gets set first, then pages render from it. Senior-bar craft using the right skill for each step.
+7. **Verify.** Typecheck, build, accessibility, performance, leak grep, AI-slop test.
+8. **Deploy.** Per `DEPLOY.md`.
+9. **Marketing, optional.** Only if you ask. SEO, content, ads, email, CRO, all running on the same skills.
 
-## Quick start (one launch prompt away from a real build)
+## Quick start
 
-```bash
-# 1. Create a folder for the client and open Claude in it.
-mkdir D:\SanctifiedOps\acme
-cd D:\SanctifiedOps\acme
-
-# 2. Clone the Big Brain into the folder.
+```powershell
+mkdir D:\Clients\acme
+cd D:\Clients\acme
 git clone https://github.com/SanctifiedOps/nami-creative-brain.git .
-
-# 3. Detach from the toolkit repo so the client gets a clean history.
-#    (Windows PowerShell)
 Remove-Item -Recurse -Force .git
 git init
 ```
 
-Now open Claude inside this folder and paste the launch prompt below. Replace the bracketed fields with whatever you know about the client; leave any field blank and Claude will research or ask for it. The brief gate stops Claude from writing any code until you approve.
-
-### The launch prompt
+Now open Claude inside the folder and paste this:
 
 ```text
 I just cloned the NAMI Creative Big Brain into this folder for a new client.
@@ -87,24 +80,21 @@ What they want: [new site / marketing setup / both]
 Timeline: [target ship date if any]
 Notes: [anything else relevant; can be blank]
 
-Read CLAUDE.md and follow the workflow in CONTEXT/workflow.md. Do not write any site code before I approve the brand brief.
+Read CLAUDE.md and follow the workflow in CONTEXT/workflow.md.
 ```
 
-That's it. Claude will read the launch rules, research the client and three competitors, ask only the questions research could not answer, fill the brand brief, and stop at the brief gate for your approval. Once you approve, it proposes a stack with reasoning (stack-agnostic; whatever fits the client), gets your sign-off, scaffolds fresh, builds, verifies, and offers to run the marketing.
+Fill in what you know, leave blanks where you don't. Claude researches the gaps and asks you only what it couldn't find. The brief is the first approval gate; stop, sign off, and then it builds.
 
-## The workflow at a glance
+## What's inside
 
-Detail lives in `CONTEXT/workflow.md`. The shape:
-
-1. **Intake** — parse the launch prompt; ask only what's missing.
-2. **Research** — autonomous: current presence, voice in the wild, three competitors, sector + market read, visual inventory.
-3. **Discovery** — ask only the questions research can't answer (voice axes, refusals, real prices, real proof).
-4. **Brief gate** — fill the brand brief from research + discovery. Get your explicit approval.
-5. **Strategy + stack gate** — positioning, voice, visual direction, page set, stack recommendation. Get your sign-off.
-6. **Build** — scaffold the chosen stack fresh, build pages to the quality bar in `build-spec.md`.
-7. **Verify** — typecheck, build, accessibility, performance, leak grep.
-8. **Deploy** — `DEPLOY.md` covers Netlify / Vercel / other.
-9. **Marketing (optional)** — only if you invite it. SEO, content, ads, email, CRO using the skills.
+- **`.claude/skills/`** — 93 Claude skills, auto-active. Full catalog below.
+- **`CLAUDE.md`** — the launch rules Claude reads first.
+- **`CONTEXT/workflow.md`** — the nine-phase workflow Claude follows on every launch.
+- **`CONTEXT/discovery.md`** — the discovery question bank, used after autonomous research.
+- **`CONTEXT/brand-brief.template.md`** — the brief shape; user approval gate.
+- **`CONTEXT/build-spec.md`** — the stack-agnostic quality bar every build ships against.
+- **`DEPLOY.md`** — deployment guidance for whatever stack the build settles on.
+- **`CREDITS.md`** — attribution for the bundled third-party skills.
 
 ## The skills library (all 93)
 
@@ -258,11 +248,11 @@ Inherited NAMI defaults. Good for any client unless the brief overrides the pers
 - **No AI tells.** No "leverage", "synergy", "in today's fast-paced world", "bespoke solutions". No exclamation marks. No filler.
 - **Real facts only.** No invented clients, metrics, or testimonials.
 - **Mobile-first, accessible, motion that can be turned off.**
-- **The design fits the sector**, not "the usual" template look. Category reflex is the slop test.
+- **The design fits the sector.** Category reflex is the slop test. Avoid it.
 
 ## Security
 
-No real secrets in this repo, ever. When Claude scaffolds a stack, real keys live in your local `.env.local` (gitignored) and the hosting platform's environment variables. Full guidance in `DEPLOY.md`.
+No real secrets in this repo, ever. When Claude scaffolds a stack into the folder, real keys live in your local `.env.local` (gitignored) and the hosting platform's environment variables. Full guidance in `DEPLOY.md`.
 
 ## Creators + credits
 
