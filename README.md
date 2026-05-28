@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src=".github/banner.png" alt="NAMI Creative Big Brain" width="100%">
+
 # NAMI Creative Big Brain
 
 ### Drop in a client. Get a brand, a website, and the marketing engine that runs it.
