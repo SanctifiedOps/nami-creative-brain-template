@@ -87,14 +87,14 @@ Fill in what you know, leave blanks where you don't. Claude researches the gaps 
 
 ## What's inside
 
-- **`.claude/skills/`** — 93 Claude skills, auto-active. Full catalog below.
-- **`CLAUDE.md`** — the launch rules Claude reads first.
-- **`CONTEXT/workflow.md`** — the nine-phase workflow Claude follows on every launch.
-- **`CONTEXT/discovery.md`** — the discovery question bank, used after autonomous research.
-- **`CONTEXT/brand-brief.template.md`** — the brief shape; user approval gate.
-- **`CONTEXT/build-spec.md`** — the stack-agnostic quality bar every build ships against.
-- **`DEPLOY.md`** — deployment guidance for whatever stack the build settles on.
-- **`CREDITS.md`** — attribution for the bundled third-party skills.
+- **`.claude/skills/`**: 93 Claude skills, auto-active. Full catalog below.
+- **`CLAUDE.md`**: the launch rules Claude reads first.
+- **`CONTEXT/workflow.md`**: the nine-phase workflow Claude follows on every launch.
+- **`CONTEXT/discovery.md`**: the discovery question bank, used after autonomous research.
+- **`CONTEXT/brand-brief.template.md`**: the brief shape; user approval gate.
+- **`CONTEXT/build-spec.md`**: the stack-agnostic quality bar every build ships against.
+- **`DEPLOY.md`**: deployment guidance for whatever stack the build settles on.
+- **`CREDITS.md`**: attribution for the bundled third-party skills.
 
 ## The skills library (all 93)
 
