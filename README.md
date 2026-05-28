@@ -1,12 +1,10 @@
 <div align="center">
 
-# NAMI Creative Brain
+# NAMI Creative Big Brain
 
-### An entire creative agency, in one repo.
+### A full creative agency, packed into a toolkit you clone.
 
-Clone it. Run discovery. Swap four files. Ship a client site that looks like it cost £10k and doesn't read as AI-made. Then keep billing the same client every month: SEO, content, ads, email, CRO, all run from the same codebase by the same 93 skills that built the site.
-
-This is how one person sells premium websites *and* marketing retainers without hiring a team.
+There is **no template site** in this repo. There is a structured workflow + 93 Claude skills that let you research a client from a single launch prompt, design their brand, build their website from scratch fit to their industry, then run the marketing operation that follows. One operator, premium output, every build a fresh build.
 
 *Creative systems built for real-world momentum.*
 
@@ -14,32 +12,30 @@ This is how one person sells premium websites *and* marketing retainers without 
 
 ---
 
-## Read this first
+## What this is (and what it is not)
 
-Most starter templates make every site look the same, and they stop at the build. You ship a site once, get paid once, and move on.
+**Not a template.** No pre-built site, no NAMI house design, no "Studio" placeholder pages sitting there waiting to be edited. Cloning this repo gives you no website. That is deliberate. Templates bias every project toward the template's aesthetic, and that is exactly the failure mode this toolkit was built to avoid.
 
-This is the opposite. It is the **production engine** behind [namicreative.co.uk](https://namicreative.co.uk), a site built so it would be hard to tell a person used an AI to design it, packaged with the full toolkit and the captured thinking so you hit that bar on every build without redoing the work. Same engine, different soul, every time. The repo ships as a clean, unbranded starter, not a copy of any existing site.
+**A toolkit.** Cloning this gives you (a) all 93 Claude skills that handle design, frontend engineering, copy, SEO, ads, email, CRO, research, and pricing, and (b) the structured workflow in `CONTEXT/` that Claude follows: intake → research → discovery → brief gate → strategy → stack choice → build → verify → marketing.
 
-Then it goes further than any template has any right to. Bundled in `.claude/skills/` are **93 Claude skills** covering design, frontend engineering, copy, SEO, conversion optimization, paid ads, email, social, competitive research, and pricing. So once the site is live, you are not done. You are set up to run the client's entire marketing operation from the same repo.
-
-**Build the site. Then build the retainer.** That is the whole pitch.
+A homeowner's plumber site, a fintech SaaS, an Aesop-tier skincare brand, and a Solana memecoin community come out looking nothing alike. They should. The toolkit makes that easy, not the opposite.
 
 ## Who this is for
 
-- **Website designers** who can design but watch their sites come out looking generic, and who only ever sell the build.
-- **Vibe coders** who ship fast with AI but can't get to that last 10% of polish that lets them charge premium money.
+- **Website designers** who want every build to start from real research about the client, not a recycled template.
+- **Vibe coders** who can ship fast with AI but watch every project drift toward the same look.
 - **Freelancers and solo operators** who want to offer a full agency menu without becoming an agency.
-- **Small studios** that want every project to start at a senior bar instead of from a blank file.
+- **Small studios** that want every new project to start at a senior bar instead of from a blank file.
 
-If you can describe a brand, you can ship its site this weekend. If you can send an email, you can sell that client a marketing retainer next month.
+If you can give Claude a one-paragraph brief about a client, you have everything you need to launch a build this weekend.
 
 ## What this unlocks (the money part, spelled out)
 
-A normal freelance build is a one-time invoice. This repo turns one client into a recurring relationship, because the skills that built the site also run everything that comes after it.
+A normal freelance build is a one-time invoice. This toolkit turns one client into a recurring relationship, because the same skills that build the site also run everything that comes after it.
 
-| You sell | Built with | Why it sticks |
-|----------|-----------|---------------|
-| The website build | the engine + design/frontend skills | Premium output at speed. Higher ticket, faster delivery. |
+| You sell | Skills behind it | Why it sticks |
+|----------|------------------|---------------|
+| The website build | the design + frontend skills, guided by the workflow | Premium output at speed. Higher ticket, faster delivery. |
 | SEO + content retainer | `seo-audit`, `ai-seo`, `programmatic-seo`, `content-strategy`, `copywriting` | Compounds monthly. Easiest recurring line to justify. |
 | Conversion optimization | `page-cro`, `form-cro`, `ab-test-setup`, `experiment-designer` | You prove lift with their own numbers. Pays for itself. |
 | Paid ads + creative | `paid-ads`, `ad-creative`, `landing-page-generator` | New campaigns and pages on demand. |
@@ -47,17 +43,68 @@ A normal freelance build is a one-time invoice. This repo turns one client into 
 | Social + community | `social-content`, `community-marketing`, `referral-program` | Always-on deliverable. |
 | Competitive + pricing strategy | `competitive-teardown`, `competitor-profiling`, `pricing-strategy`, `revops` | Advisory work at advisory rates. |
 
-One repo. One operator. A full-service offer. You decide the prices; the engine decides the quality.
+One repo. One operator. A full-service offer. You decide the prices; the toolkit decides the quality.
 
 ## What's inside
 
-- **A complete Next.js 15 site**, shipped as a neutral premium starter. Every page built and wired: home, work, services, process, pricing, insights, about, contact, and legal. No demo content to rip out, just placeholders to fill.
-- **A real design system** in `app/globals.css` (`@theme` tokens) and `lib/brand.ts`: surfaces, accents, type, motion easings, shadows, spacing rhythm. Change a token, the whole site moves with it.
-- **A bespoke motion language**: liquid video hero with instant-paint poster LCP, scroll-reveal type, spotlight cards, crafted route transitions, glass-refractive surfaces, hairline grids. All respecting `prefers-reduced-motion`, all tuned for mobile.
-- **Content architecture** in `lib/content/*.ts` and `content/insights/*.mdx`. Copy lives in modules, never hardcoded in pages, so edits propagate everywhere.
-- **Working integrations** that degrade gracefully: Mailchimp newsletter (double opt-in), Make.com contact intake, GA4. The site builds and runs before any of them are wired.
-- **93 Claude skills** in `.claude/skills/`, the full catalog below.
-- **The brain** in `CLAUDE.md` + `CONTEXT/`: discovery questionnaire, the perfect-build spec, the re-skin checklist, and a brand-brief template. The part you cannot get from a normal starter.
+- **`.claude/skills/`** — 93 Claude skills, auto-active. The full catalog below.
+- **`CLAUDE.md`** — the launch rules Claude reads first. Hard rule: there is no template to build on top of.
+- **`CONTEXT/workflow.md`** — the master nine-phase workflow Claude follows on every launch.
+- **`CONTEXT/discovery.md`** — the discovery question bank. Used in phase 3, after autonomous research.
+- **`CONTEXT/brand-brief.template.md`** — the brief shape. Phase 4 fills `brand-brief.md` from it; user approval is the gate.
+- **`CONTEXT/build-spec.md`** — the stack-agnostic quality bar every build ships against.
+- **`DEPLOY.md`** — deployment guidance for whatever stack the build settles on.
+- **`CREDITS.md`** — attribution for the bundled third-party skills.
+
+## Quick start (one launch prompt away from a real build)
+
+```bash
+# 1. Create a folder for the client and open Claude in it.
+mkdir D:\SanctifiedOps\acme
+cd D:\SanctifiedOps\acme
+
+# 2. Clone the Big Brain into the folder.
+git clone https://github.com/SanctifiedOps/nami-creative-brain.git .
+
+# 3. Detach from the toolkit repo so the client gets a clean history.
+#    (Windows PowerShell)
+Remove-Item -Recurse -Force .git
+git init
+```
+
+Now open Claude inside this folder and paste the launch prompt below. Replace the bracketed fields with whatever you know about the client; leave any field blank and Claude will research or ask for it. The brief gate stops Claude from writing any code until you approve.
+
+### The launch prompt
+
+```text
+I just cloned the NAMI Creative Big Brain into this folder for a new client.
+
+Client: [name]
+URL: [their current site, or "none yet"]
+Sector: [industry / niche]
+Location: [where they're based, who they serve]
+What they want: [new site / marketing setup / both]
+Timeline: [target ship date if any]
+Notes: [anything else relevant; can be blank]
+
+Read CLAUDE.md and follow the workflow in CONTEXT/workflow.md. Do not write any site code before I approve the brand brief.
+```
+
+That's it. Claude will read the launch rules, research the client and three competitors, ask only the questions research could not answer, fill the brand brief, and stop at the brief gate for your approval. Once you approve, it proposes a stack with reasoning (stack-agnostic; whatever fits the client), gets your sign-off, scaffolds fresh, builds, verifies, and offers to run the marketing.
+
+## The workflow at a glance
+
+Detail lives in `CONTEXT/workflow.md`. The shape:
+
+1. **Intake** — parse the launch prompt; ask only what's missing.
+2. **Research** — autonomous: current presence, voice in the wild, three competitors, sector + market read, visual inventory.
+3. **Discovery** — ask only the questions research can't answer (voice axes, refusals, real prices, real proof).
+4. **Brief gate** — fill the brand brief from research + discovery. Get your explicit approval.
+5. **Strategy + stack gate** — positioning, voice, visual direction, page set, stack recommendation. Get your sign-off.
+6. **Build** — scaffold the chosen stack fresh, build pages to the quality bar in `build-spec.md`.
+7. **Verify** — typecheck, build, accessibility, performance, leak grep.
+8. **Deploy** — `DEPLOY.md` covers Netlify / Vercel / other.
+9. **Marketing (optional)** — only if you invite it. SEO, content, ads, email, CRO using the skills.
 
 ## The skills library (all 93)
 
@@ -82,7 +129,7 @@ This is the engine room. Point Claude at a task and it reaches for the right one
 | `minimalist-ui` | Clean, editorial, restrained interfaces. |
 | `industrial-brutalist-ui` | Raw mechanical interfaces: Swiss type meets terminal aesthetics. |
 | `image-to-code` | Turn a design image into production frontend code. |
-| `landing-page-generator` | Complete, high-converting Next.js landing pages. |
+| `landing-page-generator` | Complete, high-converting landing pages. |
 | `redesign-existing-projects` | Upgrade an existing site or app to premium quality. |
 | `design` | Comprehensive design: brand identity through execution. |
 | `stitch-design-taste` | Semantic design system for Google Stitch. |
@@ -203,76 +250,23 @@ This is the engine room. Point Claude at a task and it reaches for the right one
 | `competitive-teardown` | Deep competitor teardowns scored across 12 dimensions. |
 | `competitor-alternatives` | Build "vs" and "alternative" comparison pages. |
 
-## Stack
+## House rules that travel with the toolkit
 
-| | |
-|---|---|
-| Framework | Next.js 15 (App Router, Turbopack), React 19 |
-| Styling | Tailwind v4 (`@theme`, no config file) |
-| Language | TypeScript (strict) |
-| Motion | Motion (`motion/react`) + Lenis smooth scroll |
-| Content | TypeScript content modules + MDX insights |
-| Hosting | Netlify (`@netlify/plugin-nextjs`) |
-| Forms | Mailchimp + Make.com, graceful no-op when unset |
+Inherited NAMI defaults. Good for any client unless the brief overrides the personality. The bans stay regardless.
 
-## Quick start
-
-```bash
-git clone <this repo> my-client-site
-cd my-client-site
-npm install
-cp .env.example .env.local
-npm run dev          # http://localhost:3000
-```
-
-Runs with zero env vars. Then point Claude at `CLAUDE.md` and start the build.
-
-```bash
-npm run dev          # dev server, Turbopack
-npm run build        # production build
-npm run typecheck    # tsc --noEmit
-npm run start        # serve the production build
-```
-
-## How a build goes
-
-The whole method lives in `CLAUDE.md` and the three files in `CONTEXT/`. The shape:
-
-1. **Discovery.** `CONTEXT/discovery.md` walks you through sourcing everything about the client brand: business, positioning, voice, visual direction, structure, logistics. Research first, ask second.
-2. **Brief.** Fill `CONTEXT/brand-brief.md` from the template. Confirm positioning and voice before any code. This is the gate that matters.
-3. **Re-skin.** Four swap points cascade into the whole site:
-
-   | # | File | What changes |
-   |---|------|--------------|
-   | 1 | `lib/brand.ts` | name, domain, email, tagline, promise, socials |
-   | 2 | `app/globals.css` → `@theme` | colours, surfaces, accents, fonts binding |
-   | 3 | `lib/fonts.ts` | the typeface(s) |
-   | 4 | `public/` + `lib/content/*` | logo, OG, favicon, and all copy |
-
-4. **Build and cut.** Render the pages, cut what does not earn its scroll, add only what the brief demands.
-5. **Polish.** `impeccable polish`, `critique`, and `audit`, then `stop-slop` on copy, grep for em dashes, test mobile-first and reduced-motion.
-6. **Ship.** `DEPLOY.md` covers Netlify and env vars.
-7. **Then sell the retainer.** The site is live. Now reach for the marketing, SEO, and CRO skills above and put the client on a monthly.
-
-`CONTEXT/build-spec.md` has the exhaustive re-skin checklist and the definition of "perfect" you are building to.
-
-## The rules that travel with the engine
-
-Defaults from NAMI's house style. Good for any client unless the brief overrides the personality. The bans stay regardless.
-
-- **Zero em dashes.** Anywhere. Commas, colons, semicolons, periods, or restructure.
-- **No AI-tells.** No "leverage", no "synergy", no "in today's fast-paced world", no "bespoke solutions". No filler.
+- **Zero em dashes (—).** Commas, colons, semicolons, periods, or restructure.
+- **No AI tells.** No "leverage", "synergy", "in today's fast-paced world", "bespoke solutions". No exclamation marks. No filler.
 - **Real facts only.** No invented clients, metrics, or testimonials.
 - **Mobile-first, accessible, motion that can be turned off.**
-- **Never read as templated.** If two sites built from this base look like siblings, the re-skin failed.
+- **The design fits the sector**, not "the usual" template look. Category reflex is the slop test.
 
 ## Security
 
-No real secrets in this repo, ever. `.env.example` is placeholders only. Real keys live in your local `.env.local` (gitignored) and the Netlify project's environment variables. Full detail in `DEPLOY.md`.
+No real secrets in this repo, ever. When Claude scaffolds a stack, real keys live in your local `.env.local` (gitignored) and the hosting platform's environment variables. Full guidance in `DEPLOY.md`.
 
 ## Creators + credits
 
-The engine, design system, motion language, and the `CONTEXT/` build IP are NAMI Creative's. The skills library stands on the shoulders of the open-source community. Named credits:
+The workflow, the `CONTEXT/` build IP, and the toolkit framing are NAMI Creative's. The skills library stands on the shoulders of the open-source community. Named credits:
 
 - **[obra / Superpowers](https://github.com/obra/superpowers)**: the agent-workflow and engineering-discipline skills (`using-superpowers`, `brainstorming`, `writing-plans`, `executing-plans`, `subagent-driven-development`, `dispatching-parallel-agents`, `using-git-worktrees`, `writing-skills`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`, `systematic-debugging`, `test-driven-development`, `verification-before-completion`).
 - **[Hardik Pandya](https://github.com/hardikpandya/stop-slop)**: `stop-slop` (MIT).

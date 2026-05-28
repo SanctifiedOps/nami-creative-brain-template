@@ -1,6 +1,6 @@
 # Brand brief — [CLIENT NAME]
 
-> Copy this file to `CONTEXT/brand-brief.md` and fill every section before building. This is the single source of truth for the client. The build renders from it. Mark anything still unconfirmed as `ASSUMED:` so it stays visible. Sourced via `CONTEXT/discovery.md`.
+> Copy this file to `CONTEXT/brand-brief.md` and fill every section before building. This is the single source of truth for the client. The build renders from it. Mark anything still unconfirmed as `ASSUMED:` so it stays visible. Sourced via `CONTEXT/workflow.md` (phases 2 + 3).
 
 **Status:** Draft / Confirmed by client on [date]
 **Decision-maker / approver:** [name]
@@ -8,13 +8,13 @@
 
 ---
 
-## Research notes (filled before the client call)
+## Research notes (filled in phase 2, before discovery)
 
-- **Current presence:** [existing site, socials, reviews, press — what works, what doesn't]
+- **Current presence:** [existing site, socials, reviews, press; what works, what is broken]
 - **Voice in the wild:** [five real sentences pulled from their own copy]
-- **Competitors:** [three direct ones; what's saturated in the sector to avoid]
-- **Visual inventory:** [existing logo, colours, fonts, photography — reusable vs. holding them back]
-- **Market read:** [who actually buys, in what context, at what tier]
+- **Three competitors:** [direct ones; the sector reflex to avoid]
+- **Sector + market read:** [who buys, in what context, at what tier; conventions in the sector]
+- **Visual inventory:** [existing logo, colours, fonts, photography; reusable vs holding them back]
 
 ---
 
@@ -31,14 +31,14 @@
 
 - **Stands for:**
 - **Refuses to do:**
-- **Tagline:** [→ `lib/brand.ts` tagline]
-- **Promise:** [→ `lib/brand.ts` promise]
+- **Tagline:**
+- **Promise:**
 - **Voice axes:** Warm ↔ Cool [ ] · Playful ↔ Serious [ ] · Plain ↔ Technical [ ] · Understated ↔ Bold [ ]
 - **Admires (brand):** ___ because ___
 - **Can't stand (brand):** ___ because ___
 - **Words they love:**
-- **Words they ban:** (inherited: em dashes, "no fluff"/"no filler", AI-tells, exclamation marks) plus:
-- **Three real proof points:** (no invented metrics)
+- **Words they ban (inherited defaults: em dashes, "no fluff" / "no filler", AI tells, exclamation marks) plus the client's own:**
+- **Three real proof points (no invented metrics):**
   1.
   2.
   3.
@@ -46,38 +46,46 @@
 ## 3. Visual direction
 
 - **Colour strategy:** Restrained / Committed / Full palette / Drenched
-- **Accent + surfaces (real hex):** [→ `@theme` block]
+- **Real values (OKLCH or hex):**
   - surface scale:
   - accent / accent-soft / accent-deep / accent-2:
   - foreground:
-- **Theme:** Dark / Light — *one-sentence scene that forces this:*
-- **Type personality:** [→ `lib/fonts.ts`] body font: ___ / display font (if any): ___
+- **Theme:** Dark / Light. *One-sentence scene that forces this:*
+- **Type personality:** body font: ___ / display font (if any): ___
 - **Visual metaphor:**
 - **Motion level:** Energetic / Balanced / Restrained / Still
-- **Logo + assets status:** [have / need / commission]
+- **Logo + assets status:** have / need / commission
 
 ## 4. Structure + content
 
 - **What the visitor must believe to act:**
 - **Page set (kept):**
 - **Page set (cut, and why):**
-- **Services / offers:** [→ `services.ts` / `offers.ts`]
+- **Services / offers:**
   | Pillar | What it is | Outcome it buys |
   |--------|-----------|-----------------|
   | | | |
-- **Proof / work:** [→ `work.ts`, `testimonials.ts`]
-- **Process phases:** [→ `process.ts`]
-- **Engagement + pricing:** [→ `engagement.ts`, pricing page] — prices public? Y/N
-- **The one action:** [the single most important visitor action]
-- **Insights:** publishing? Y/N — seeded angles:
+- **Proof / work:**
+- **Process phases:**
+- **Engagement + pricing:** prices public? Y/N
+- **The one action:**
+- **Insights:** publishing? Y/N. Seeded angles:
 
 ## 5. Logistics
 
-- **Domain + registrar:** [→ `lib/brand.ts` domain/url + Netlify]
-- **Integrations:** Mailchimp ___ · CRM ___ · Booking ___ · Analytics ___
+- **Domain + registrar:**
+- **Integrations:** Newsletter ___ · CRM ___ · Booking ___ · Analytics ___
 - **Inbox for form submissions:**
-- **Legal:** company name ___ · registered address ___ · privacy/terms basis ___
+- **Legal:** company name ___ · registered address ___ · privacy basis ___
 - **Timeline + sign-off:**
+- **Budget posture:** Lean / Comfortable / Premium
+
+## 6. Stack (filled in phase 5, after brief approval)
+
+- **Stack chosen:** [Next.js 15 / Astro / Webflow handoff / other]
+- **Reason:**
+- **Hosting:**
+- **Approved by user on:** [date]
 
 ---
 
